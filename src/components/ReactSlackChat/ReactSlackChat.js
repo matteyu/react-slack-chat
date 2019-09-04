@@ -792,7 +792,12 @@ class ReactSlackChat extends Component {
       </div>
     );
 
-    return <div>{chatbox}</div>;
+    return (
+      <div>
+        <div>{chatbox}</div>
+        <div>{chatbox}</div>
+      </div>
+    );
   }
 }
 

@@ -7906,7 +7906,12 @@ object-assign
                       )
                     )
                   );
-                  return o.a.createElement('div', null, A);
+                  return o.a.createElement(
+                    'div',
+                    null,
+                    o.a.createElement('div', null, A),
+                    o.a.createElement('div', null, A)
+                  );
                 }
               }
             ]) && v(n.prototype, t),
