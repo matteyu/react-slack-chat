@@ -661,6 +661,10 @@ class ReactSlackChat extends Component {
     const chatbox = (
       <div>
         <div
+          style={{
+            position: 'fixed',
+            left: '1%'
+          }}
           className={classNames(
             styles.card,
             styles.transition,

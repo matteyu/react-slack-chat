@@ -7721,6 +7721,7 @@ object-assign
                     o.a.createElement(
                       'div',
                       {
+                        style: { position: 'fixed', left: '1%' },
                         className: _()(
                           C.a.card,
                           C.a.transition,

@@ -6736,6 +6736,7 @@ object-assign
                     o.a.createElement(
                       'div',
                       {
+                        style: { position: 'fixed', left: '1%' },
                         className: I()(
                           p.a.card,
                           p.a.transition,
