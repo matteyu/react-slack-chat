@@ -6551,7 +6551,7 @@ object-assign
     function(e, A, n) {
       (A = e.exports = n(148)(!1)).push([
         e.i,
-        '@import url(https://fonts.googleapis.com/css?family=Raleway:400,200);',
+        '@import url(https://fonts.googleapis.com/css?family=Raleway:400, 200);',
         ''
       ]),
         A.push([
