@@ -7227,7 +7227,7 @@ object-assign
                 debugMode: !1,
                 hooks: []
               }),
-              (n.apiToken = atob(n.props.apiToken)),
+              (n.apiToken = atob(n.state.apiToken)),
               (n.refreshTime = 5e3),
               (n.chatInitiatedTs = ''),
               (n.activeChannel = []),

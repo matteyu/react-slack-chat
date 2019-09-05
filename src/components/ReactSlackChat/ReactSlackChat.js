@@ -67,7 +67,7 @@ class ReactSlackChat extends Component {
     };
     // Set class variables
     // Base64 decode the API Token
-    this.apiToken = atob(this.props.apiToken);
+    this.apiToken = atob(this.state.apiToken);
     this.refreshTime = 5000;
     this.chatInitiatedTs = '';
     this.activeChannel = [];
