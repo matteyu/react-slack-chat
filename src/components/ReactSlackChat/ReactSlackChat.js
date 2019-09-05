@@ -678,7 +678,7 @@ class ReactSlackChat extends Component {
 
     // Looks like nothing failed, let's start to render our chatbox
     const chatbox = (props, configProps) =>
-      (configProps => this.handleFileChange(configProps)) && (
+      this.setChatConfig(configProps) && (
         <div>
           <div
             style={props}

@@ -7774,17 +7774,16 @@ object-assign
                     null,
                     Object.entries(this.props.chatStyles).map(function(A) {
                       var n,
-                        t = x(A, 2),
-                        r = t[0],
-                        a = t[1];
+                        t,
+                        r = x(A, 2),
+                        a = r[0],
+                        i = r[1];
                       return o.a.createElement(
                         'div',
-                        { key: r },
-                        ((n = a.styling),
-                        a[r],
-                        function(A) {
-                          return e.handleFileChange(A);
-                        } &&
+                        { key: a },
+                        ((n = i.styling),
+                        (t = i[a]),
+                        e.setChatConfig(t) &&
                           o.a.createElement(
                             'div',
                             null,

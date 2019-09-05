@@ -181,8 +181,8 @@
         A = y(n(127)),
         C = y(n(128)),
         s = y(n(38)),
-        u = y(n(129)),
-        I = y(n(130)),
+        I = y(n(129)),
+        u = y(n(130)),
         l = y(n(131)),
         c = y(n(132)),
         d = y(n(133)),
@@ -209,8 +209,8 @@
         chat: A.default,
         dnd: C.default,
         emoji: { list: s.default },
-        files: u.default,
-        groups: I.default,
+        files: I.default,
+        groups: u.default,
         im: l.default,
         mpim: c.default,
         oauth: { access: d.default },
@@ -1925,8 +1925,8 @@
         A = n(10),
         C = n(11),
         s = n(6),
-        u = n(117),
-        I = o.create;
+        I = n(117),
+        u = o.create;
       e.exports = (function e(t, n) {
         function r(e, r) {
           var o, l, c, d, p, f;
@@ -1939,22 +1939,22 @@
             }
           for (d in ((o = o || new i()),
           (e.xhr = o),
-          (c = u(
+          (c = I(
             g(function(t) {
               clearTimeout(p),
                 (o.onload = o.onerror = o.onabort = o.onreadystatechange = o.ontimeout = o.onprogress = null);
               var i = (function(e, t) {
                   if (e.aborted)
-                    return I('Request aborted', e, { name: 'Abort' });
+                    return u('Request aborted', e, { name: 'Abort' });
                   if (e.timedOut)
-                    return I('Request timeout', e, { name: 'Timeout' });
+                    return u('Request timeout', e, { name: 'Timeout' });
                   var n,
                     a = e.xhr;
                   switch (Math.floor(a.status / 100)) {
                     case 0:
                     case 2:
                       if (!t) return;
-                      return I(t.message, e);
+                      return u(t.message, e);
                     case 4:
                       if (404 === a.status && !e.errorOn404) return;
                       n = 'Client';
@@ -1974,7 +1974,7 @@
                     ' ' +
                     e.url +
                     '"';
-                  return I(r, e);
+                  return u(r, e);
                 })(e, t),
                 g = i || A.fromRequest(e);
               for (a = 0; a < n.length; a++)
@@ -5087,8 +5087,8 @@ object-assign
         A = f(n(20)),
         C = f(n(21)),
         s = f(n(22)),
-        u = f(n(23)),
-        I = f(n(24)),
+        I = f(n(23)),
+        u = f(n(24)),
         l = f(n(25)),
         c = f(n(26)),
         d = f(n(27)),
@@ -5105,8 +5105,8 @@ object-assign
         join: A.default,
         kick: C.default,
         leave: s.default,
-        list: u.default,
-        mark: I.default,
+        list: I.default,
+        mark: u.default,
         rename: l.default,
         setPurpose: c.default,
         setTopic: d.default,
@@ -5155,16 +5155,16 @@ object-assign
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var a = I(n(42)),
-        r = I(n(43)),
-        i = I(n(44)),
-        g = I(n(47)),
-        o = I(n(39)),
-        A = I(n(40)),
-        C = I(n(41)),
-        s = I(n(45)),
-        u = I(n(46));
-      function I(e) {
+      var a = u(n(42)),
+        r = u(n(43)),
+        i = u(n(44)),
+        g = u(n(47)),
+        o = u(n(39)),
+        A = u(n(40)),
+        C = u(n(41)),
+        s = u(n(45)),
+        I = u(n(46));
+      function u(e) {
         return e && e.__esModule ? e : { default: e };
       }
       (t.default = {
@@ -5174,7 +5174,7 @@ object-assign
         upload: g.default,
         comments: { add: o.default, delete: A.default, edit: C.default },
         revokePublicURL: s.default,
-        sharedPublicURL: u.default
+        sharedPublicURL: I.default
       }),
         (e.exports = t.default);
     },
@@ -5189,8 +5189,8 @@ object-assign
         A = m(n(53)),
         C = m(n(54)),
         s = m(n(55)),
-        u = m(n(56)),
-        I = m(n(57)),
+        I = m(n(56)),
+        u = m(n(57)),
         l = m(n(58)),
         c = m(n(59)),
         d = m(n(60)),
@@ -5209,8 +5209,8 @@ object-assign
         info: A.default,
         invite: C.default,
         kick: s.default,
-        leave: u.default,
-        list: I.default,
+        leave: I.default,
+        list: u.default,
         mark: l.default,
         open: c.default,
         rename: d.default,
@@ -5689,8 +5689,8 @@ object-assign
         A = null,
         C = 0,
         s = [],
-        u = n(147);
-      function I(e, t) {
+        I = n(147);
+      function u(e, t) {
         for (var n = 0; n < e.length; n++) {
           var a = e[n],
             r = i[a.id];
@@ -5801,7 +5801,7 @@ object-assign
                 var a = n.css,
                   r = n.sourceMap,
                   i = void 0 === t.convertToAbsoluteUrls && r;
-                (t.convertToAbsoluteUrls || i) && (a = u(a));
+                (t.convertToAbsoluteUrls || i) && (a = I(a));
                 r &&
                   (a +=
                     '\n/*# sourceMappingURL=data:application/json;base64,' +
@@ -5854,13 +5854,13 @@ object-assign
           t.insertAt || (t.insertAt = 'bottom');
         var n = l(e, t);
         return (
-          I(n, t),
+          u(n, t),
           function(e) {
             for (var a = [], r = 0; r < n.length; r++) {
               var g = n[r];
               (o = i[g.id]).refs--, a.push(o);
             }
-            e && I(l(e, t), t);
+            e && u(l(e, t), t);
             for (r = 0; r < a.length; r++) {
               var o;
               if (0 === (o = a[r]).refs) {
@@ -5949,8 +5949,8 @@ object-assign
         A = (n(110), n(4)),
         C = n.n(A),
         s = n(5),
-        u = n(8);
-      var I = function e(t) {
+        I = n(8);
+      var u = function e(t) {
           !(function(e, t) {
             if (!(e instanceof t))
               throw new TypeError('Cannot call a class as a function');
@@ -6216,7 +6216,7 @@ object-assign
                 T(n)
               )),
               (n.setChatConfig = n.setChatConfig.bind(T(n))),
-              Object(u.load)()
+              Object(I.load)()
                 .then(function() {
                   n.messageFormatter = { emoji: !0 };
                 })
@@ -6333,7 +6333,7 @@ object-assign
                   return (
                     this.messageFormatter.emoji &&
                       A &&
-                      (t = Object(u.parse)(t)),
+                      (t = Object(I.parse)(t)),
                     o.a.createElement(
                       'div',
                       {
@@ -6390,7 +6390,7 @@ object-assign
                         var a = [];
                         n.users.map(function(t) {
                           return e.isValidOnlineUser(t)
-                            ? a.push(new I(t))
+                            ? a.push(new u(t))
                             : null;
                         });
                         var r = [];
@@ -6789,17 +6789,16 @@ object-assign
                     null,
                     Object.entries(this.props.chatStyles).map(function(t) {
                       var n,
-                        a = O(t, 2),
-                        r = a[0],
-                        i = a[1];
+                        a,
+                        r = O(t, 2),
+                        i = r[0],
+                        g = r[1];
                       return o.a.createElement(
                         'div',
-                        { key: r },
-                        ((n = i.styling),
-                        i[r],
-                        function(t) {
-                          return e.handleFileChange(t);
-                        } &&
+                        { key: i },
+                        ((n = g.styling),
+                        (a = g[i]),
+                        e.setChatConfig(a) &&
                           o.a.createElement(
                             'div',
                             null,
