@@ -6779,7 +6779,7 @@ object-assign
                         o.a.createElement(
                           'div',
                           { key: r },
-                          ((n = i),
+                          ((n = i[r]),
                           o.a.createElement(
                             'div',
                             null,

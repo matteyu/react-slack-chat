@@ -799,7 +799,7 @@ class ReactSlackChat extends Component {
           console.log({ value });
           return (
             // <div>{key} : {value.toString()}</div>
-            <div key={key}>{chatbox(value)}</div>
+            <div key={key}>{chatbox(value[key])}</div>
           );
         })}
       </div>

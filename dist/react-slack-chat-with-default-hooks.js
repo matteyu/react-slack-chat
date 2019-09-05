@@ -7764,7 +7764,7 @@ object-assign
                         o.a.createElement(
                           'div',
                           { key: r },
-                          ((n = a),
+                          ((n = a[r]),
                           o.a.createElement(
                             'div',
                             null,
