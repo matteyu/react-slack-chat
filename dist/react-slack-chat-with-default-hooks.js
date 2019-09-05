@@ -7750,23 +7750,27 @@ object-assign
                 value: function() {
                   var e = this;
                   if (this.state.failed) return !1;
-                  return o.a.createElement(
-                    'div',
-                    null,
-                    Object.entries(this.props.chatStyles).map(function(A) {
-                      var n = U(A, 2),
-                        t = n[0],
-                        r = n[1];
-                      return o.a.createElement('div', { key: t }, function() {
-                        return (
-                          (A = r),
+                  return (
+                    console.log(this.props.chatStyles),
+                    o.a.createElement(
+                      'div',
+                      null,
+                      Object.entries(this.props.chatStyles).map(function(A) {
+                        var n,
+                          t = U(A, 2),
+                          r = t[0],
+                          a = t[1];
+                        return o.a.createElement(
+                          'div',
+                          { key: r },
+                          ((n = a),
                           o.a.createElement(
                             'div',
                             null,
                             o.a.createElement(
                               'div',
                               {
-                                style: { props: A },
+                                style: { props: n },
                                 className: _()(
                                   C.a.card,
                                   C.a.transition,
@@ -7963,11 +7967,10 @@ object-assign
                                 )
                               )
                             )
-                          )
+                          ))
                         );
-                        var A;
-                      });
-                    })
+                      })
+                    )
                   );
                 }
               }

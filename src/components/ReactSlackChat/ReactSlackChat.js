@@ -792,13 +792,13 @@ class ReactSlackChat extends Component {
         </div>
       </div>
     );
-
+    console.log(this.props.chatStyles);
     return (
       <div>
         {Object.entries(this.props.chatStyles).map(([key, value]) => {
           return (
             // <div>{key} : {value.toString()}</div>
-            <div key={key}>{() => chatbox(value)}</div>
+            <div key={key}>{chatbox(value)}</div>
           );
         })}
       </div>
