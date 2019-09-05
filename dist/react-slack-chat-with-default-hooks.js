@@ -7248,6 +7248,7 @@ object-assign
               (n.displayFormattedMessage = n.displayFormattedMessage.bind(
                 Q(n)
               )),
+              (n.setChatConfig = n.setChatConfig.bind(Q(n))),
               Object(_.load)()
                 .then(function() {
                   n.messageFormatter = { emoji: !0 };
@@ -7751,6 +7752,19 @@ object-assign
                 }
               },
               {
+                key: 'setChatConfig',
+                value: function(e) {
+                  this.setState({ botName: e.botName }),
+                    this.setState({ apiToken: e.apiToken }),
+                    this.setState({ importedChannels: e.channels }),
+                    this.setState({ helpText: e.helpText }),
+                    this.setState({ themeColor: e.themeColor }),
+                    this.setState({ userImage: e.userImage }),
+                    this.setState({ debugMode: e.debugMode }),
+                    this.setState({ hooks: e.hook });
+                }
+              },
+              {
                 key: 'render',
                 value: function() {
                   var e = this;
@@ -7760,23 +7774,17 @@ object-assign
                     null,
                     Object.entries(this.props.chatStyles).map(function(A) {
                       var n,
-                        t,
-                        r = x(A, 2),
-                        a = r[0],
-                        i = r[1];
+                        t = x(A, 2),
+                        r = t[0],
+                        a = t[1];
                       return o.a.createElement(
                         'div',
-                        { key: a },
-                        ((n = i.styling),
-                        (t = i[a]),
-                        e.setState({ botName: t.botName }) &&
-                          e.setState({ apiToken: t.apiToken }) &&
-                          e.setState({ importedChannels: t.channels }) &&
-                          e.setState({ helpText: t.helpText }) &&
-                          e.setState({ themeColor: t.themeColor }) &&
-                          e.setState({ userImage: t.userImage }) &&
-                          e.setState({ debugMode: t.debugMode }) &&
-                          e.setState({ hooks: t.hook }) &&
+                        { key: r },
+                        ((n = a.styling),
+                        a[r],
+                        function(A) {
+                          return e.handleFileChange(A);
+                        } &&
                           o.a.createElement(
                             'div',
                             null,

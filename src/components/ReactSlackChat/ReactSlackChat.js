@@ -95,6 +95,7 @@ class ReactSlackChat extends Component {
     this.goToChannelView = this.goToChannelView.bind(this);
     // Utils
     this.displayFormattedMessage = this.displayFormattedMessage.bind(this);
+    this.setChatConfig = this.setChatConfig.bind(this);
 
     // Initiate Emoji Library
     emojiLoader()
@@ -657,6 +658,17 @@ class ReactSlackChat extends Component {
     });
   }
 
+  setChatConfig(configProps) {
+    this.setState({ botName: configProps['botName'] });
+    this.setState({ apiToken: configProps['apiToken'] });
+    this.setState({ importedChannels: configProps['channels'] });
+    this.setState({ helpText: configProps['helpText'] });
+    this.setState({ themeColor: configProps['themeColor'] });
+    this.setState({ userImage: configProps['userImage'] });
+    this.setState({ debugMode: configProps['debugMode'] });
+    this.setState({ hooks: configProps['hook'] });
+  }
+
   render() {
     // If Slack communications have failed or errored out
     // do not render anything
@@ -666,14 +678,7 @@ class ReactSlackChat extends Component {
 
     // Looks like nothing failed, let's start to render our chatbox
     const chatbox = (props, configProps) =>
-      this.setState({ botName: configProps['botName'] }) &&
-      this.setState({ apiToken: configProps['apiToken'] }) &&
-      this.setState({ importedChannels: configProps['channels'] }) &&
-      this.setState({ helpText: configProps['helpText'] }) &&
-      this.setState({ themeColor: configProps['themeColor'] }) &&
-      this.setState({ userImage: configProps['userImage'] }) &&
-      this.setState({ debugMode: configProps['debugMode'] }) &&
-      this.setState({ hooks: configProps['hook'] }) && (
+      (configProps => this.handleFileChange(configProps)) && (
         <div>
           <div
             style={props}
