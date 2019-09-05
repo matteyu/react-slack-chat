@@ -7758,218 +7758,207 @@ object-assign
                         t = U(A, 2),
                         r = t[0],
                         a = t[1];
-                      return (
-                        console.log({ key: r }),
-                        console.log({ value: a }),
+                      return o.a.createElement(
+                        'div',
+                        { key: r },
+                        ((n = a[r]),
                         o.a.createElement(
                           'div',
-                          { key: r },
-                          ((n = a[r]),
+                          null,
                           o.a.createElement(
                             'div',
-                            null,
+                            {
+                              style: n,
+                              className: _()(
+                                C.a.card,
+                                C.a.transition,
+                                e.state.chatbox.active ? C.a.active : '',
+                                e.state.chatbox.chatActiveView
+                                  ? C.a.chatActive
+                                  : ''
+                              ),
+                              onClick: e.openChatBox
+                            },
+                            o.a.createElement(
+                              'div',
+                              { className: C.a.helpHeader },
+                              e.state.newMessageNotification > 0 &&
+                                o.a.createElement(
+                                  'span',
+                                  { className: C.a.unreadNotificationsBadge },
+                                  e.state.newMessageNotification
+                                ),
+                              o.a.createElement(
+                                'h2',
+                                { className: C.a.transition },
+                                e.state.helpText || 'Help?'
+                              )
+                            ),
+                            o.a.createElement('div', {
+                              className: _()(C.a.card_circle, C.a.transition)
+                            }),
                             o.a.createElement(
                               'div',
                               {
-                                style: { props: n },
                                 className: _()(
-                                  C.a.card,
+                                  C.a.channels,
                                   C.a.transition,
-                                  e.state.chatbox.active ? C.a.active : '',
-                                  e.state.chatbox.chatActiveView
-                                    ? C.a.chatActive
+                                  e.state.chatbox.channelActiveView
+                                    ? C.a.channelActive
                                     : ''
-                                ),
-                                onClick: e.openChatBox
-                              },
-                              o.a.createElement(
-                                'div',
-                                { className: C.a.helpHeader },
-                                e.state.newMessageNotification > 0 &&
-                                  o.a.createElement(
-                                    'span',
-                                    { className: C.a.unreadNotificationsBadge },
-                                    e.state.newMessageNotification
-                                  ),
-                                o.a.createElement(
-                                  'h2',
-                                  { className: C.a.transition },
-                                  e.state.helpText || 'Help?'
                                 )
-                              ),
-                              o.a.createElement('div', {
-                                className: _()(C.a.card_circle, C.a.transition)
-                              }),
-                              o.a.createElement(
-                                'div',
-                                {
-                                  className: _()(
-                                    C.a.channels,
-                                    C.a.transition,
-                                    e.state.chatbox.channelActiveView
-                                      ? C.a.channelActive
-                                      : ''
-                                  )
-                                },
-                                e.state.channels.map(function(A) {
-                                  return o.a.createElement(
-                                    'div',
-                                    {
-                                      className: C.a.contact,
-                                      key: A.id,
-                                      onClick: function(n) {
-                                        return e.goToChatView(n, A);
-                                      }
-                                    },
-                                    A.icon
-                                      ? o.a.createElement('img', {
-                                          src: A.icon,
-                                          className: C.a.contact__photo
-                                        })
-                                      : o.a.createElement('div', {
-                                          dangerouslySetInnerHTML: {
-                                            __html: I.a
-                                          },
-                                          className: C.a.contact__photo
-                                        }),
-                                    o.a.createElement(
-                                      'span',
-                                      { className: C.a.contact__name },
-                                      A.name
-                                    ),
-                                    o.a.createElement('span', {
-                                      className: _()(
-                                        C.a.contact__status,
-                                        C.a.online
-                                      )
-                                    })
-                                  );
-                                })
-                              ),
-                              o.a.createElement(
-                                'div',
-                                { className: _()(C.a.chat) },
-                                o.a.createElement(
+                              },
+                              e.state.channels.map(function(A) {
+                                return o.a.createElement(
                                   'div',
-                                  { className: _()(C.a.chatHeader) },
-                                  o.a.createElement('span', {
-                                    className: C.a.chat__back,
-                                    onClick: e.goToChannelView
-                                  }),
-                                  o.a.createElement(
-                                    'div',
-                                    { className: C.a.chat__person },
-                                    o.a.createElement(
-                                      'span',
-                                      { className: C.a.chat__status },
-                                      'status'
-                                    ),
-                                    o.a.createElement('span', {
-                                      className: _()(
-                                        C.a.chat__online,
-                                        C.a.active
-                                      )
-                                    }),
-                                    o.a.createElement(
-                                      'span',
-                                      { className: C.a.chat__name },
-                                      e.activeChannel.name
-                                    )
-                                  ),
-                                  e.activeChannel.icon
+                                  {
+                                    className: C.a.contact,
+                                    key: A.id,
+                                    onClick: function(n) {
+                                      return e.goToChatView(n, A);
+                                    }
+                                  },
+                                  A.icon
                                     ? o.a.createElement('img', {
-                                        src: e.activeChannel.icon,
-                                        className: C.a.channel__header__photo
+                                        src: A.icon,
+                                        className: C.a.contact__photo
                                       })
                                     : o.a.createElement('div', {
                                         dangerouslySetInnerHTML: {
                                           __html: I.a
                                         },
-                                        className: C.a.channel__header__photo
+                                        className: C.a.contact__photo
                                       }),
-                                  e.props.closeChatButton
-                                    ? o.a.createElement(
-                                        'button',
-                                        {
-                                          className: C.a.channel__close__button,
-                                          onClick: e.closeChatBox
-                                        },
-                                        '×'
-                                      )
-                                    : null
-                                ),
-                                o.a.createElement(
-                                  'div',
-                                  {
-                                    className: C.a.chat__messages,
-                                    id: 'widget-reactSlakChatMessages'
-                                  },
-                                  e.state.messages.map(function(A) {
-                                    return e.displayFormattedMessage(A);
+                                  o.a.createElement(
+                                    'span',
+                                    { className: C.a.contact__name },
+                                    A.name
+                                  ),
+                                  o.a.createElement('span', {
+                                    className: _()(
+                                      C.a.contact__status,
+                                      C.a.online
+                                    )
                                   })
-                                ),
+                                );
+                              })
+                            ),
+                            o.a.createElement(
+                              'div',
+                              { className: _()(C.a.chat) },
+                              o.a.createElement(
+                                'div',
+                                { className: _()(C.a.chatHeader) },
+                                o.a.createElement('span', {
+                                  className: C.a.chat__back,
+                                  onClick: e.goToChannelView
+                                }),
                                 o.a.createElement(
                                   'div',
-                                  null,
-                                  e.state.fileUploadLoader
-                                    ? o.a.createElement(
-                                        'div',
-                                        {
-                                          className: C.a.chat__file__uploading
-                                        },
-                                        o.a.createElement(
-                                          'span',
-                                          { className: C.a.loading },
-                                          'Uploading'
-                                        )
+                                  { className: C.a.chat__person },
+                                  o.a.createElement(
+                                    'span',
+                                    { className: C.a.chat__status },
+                                    'status'
+                                  ),
+                                  o.a.createElement('span', {
+                                    className: _()(C.a.chat__online, C.a.active)
+                                  }),
+                                  o.a.createElement(
+                                    'span',
+                                    { className: C.a.chat__name },
+                                    e.activeChannel.name
+                                  )
+                                ),
+                                e.activeChannel.icon
+                                  ? o.a.createElement('img', {
+                                      src: e.activeChannel.icon,
+                                      className: C.a.channel__header__photo
+                                    })
+                                  : o.a.createElement('div', {
+                                      dangerouslySetInnerHTML: { __html: I.a },
+                                      className: C.a.channel__header__photo
+                                    }),
+                                e.props.closeChatButton
+                                  ? o.a.createElement(
+                                      'button',
+                                      {
+                                        className: C.a.channel__close__button,
+                                        onClick: e.closeChatBox
+                                      },
+                                      '×'
+                                    )
+                                  : null
+                              ),
+                              o.a.createElement(
+                                'div',
+                                {
+                                  className: C.a.chat__messages,
+                                  id: 'widget-reactSlakChatMessages'
+                                },
+                                e.state.messages.map(function(A) {
+                                  return e.displayFormattedMessage(A);
+                                })
+                              ),
+                              o.a.createElement(
+                                'div',
+                                null,
+                                e.state.fileUploadLoader
+                                  ? o.a.createElement(
+                                      'div',
+                                      { className: C.a.chat__file__uploading },
+                                      o.a.createElement(
+                                        'span',
+                                        { className: C.a.loading },
+                                        'Uploading'
                                       )
-                                    : null,
-                                  e.state.fileUploadLoader
-                                    ? null
-                                    : o.a.createElement(
+                                    )
+                                  : null,
+                                e.state.fileUploadLoader
+                                  ? null
+                                  : o.a.createElement(
+                                      'div',
+                                      null,
+                                      o.a.createElement(
                                         'div',
-                                        null,
+                                        { className: C.a.attachment },
                                         o.a.createElement(
-                                          'div',
-                                          { className: C.a.attachment },
-                                          o.a.createElement(
-                                            'label',
-                                            {
-                                              htmlFor: 'chat__upload',
-                                              className: C.a.attachmentIcon
-                                            },
-                                            o.a.createElement('input', {
-                                              type: 'file',
-                                              id: 'chat__upload',
-                                              className: C.a.chat__upload,
-                                              value: e.state.postMyFile,
-                                              onChange: function(A) {
-                                                return e.handleFileChange(A);
-                                              }
-                                            })
-                                          )
-                                        ),
-                                        o.a.createElement('input', {
-                                          type: 'text',
-                                          id: 'chat__input__text',
-                                          className: C.a.chat__input,
-                                          value: e.state.postMyMessage,
-                                          placeholder: 'Enter your message...',
-                                          onKeyPress: function(A) {
-                                            return 'Enter' === A.key
-                                              ? e.postMyMessage()
-                                              : null;
+                                          'label',
+                                          {
+                                            htmlFor: 'chat__upload',
+                                            className: C.a.attachmentIcon
                                           },
-                                          onChange: function(A) {
-                                            return e.handleChange(A);
-                                          }
-                                        })
-                                      )
-                                )
+                                          o.a.createElement('input', {
+                                            type: 'file',
+                                            id: 'chat__upload',
+                                            className: C.a.chat__upload,
+                                            value: e.state.postMyFile,
+                                            onChange: function(A) {
+                                              return e.handleFileChange(A);
+                                            }
+                                          })
+                                        )
+                                      ),
+                                      o.a.createElement('input', {
+                                        type: 'text',
+                                        id: 'chat__input__text',
+                                        className: C.a.chat__input,
+                                        value: e.state.postMyMessage,
+                                        placeholder: 'Enter your message...',
+                                        onKeyPress: function(A) {
+                                          return 'Enter' === A.key
+                                            ? e.postMyMessage()
+                                            : null;
+                                        },
+                                        onChange: function(A) {
+                                          return e.handleChange(A);
+                                        }
+                                      })
+                                    )
                               )
                             )
-                          ))
-                        )
+                          )
+                        ))
                       );
                     })
                   );

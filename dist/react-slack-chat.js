@@ -184,8 +184,8 @@
         A = y(n(127)),
         C = y(n(128)),
         s = y(n(39)),
-        u = y(n(129)),
-        I = y(n(130)),
+        I = y(n(129)),
+        u = y(n(130)),
         l = y(n(131)),
         c = y(n(132)),
         d = y(n(133)),
@@ -212,8 +212,8 @@
         chat: A.default,
         dnd: C.default,
         emoji: { list: s.default },
-        files: u.default,
-        groups: I.default,
+        files: I.default,
+        groups: u.default,
         im: l.default,
         mpim: c.default,
         oauth: { access: d.default },
@@ -1925,8 +1925,8 @@
         A = n(11),
         C = n(12),
         s = n(7),
-        u = n(117),
-        I = o.create;
+        I = n(117),
+        u = o.create;
       e.exports = (function e(t, n) {
         function r(e, r) {
           var o, l, c, d, p, f;
@@ -1939,22 +1939,22 @@
             }
           for (d in ((o = o || new i()),
           (e.xhr = o),
-          (c = u(
+          (c = I(
             g(function(t) {
               clearTimeout(p),
                 (o.onload = o.onerror = o.onabort = o.onreadystatechange = o.ontimeout = o.onprogress = null);
               var i = (function(e, t) {
                   if (e.aborted)
-                    return I('Request aborted', e, { name: 'Abort' });
+                    return u('Request aborted', e, { name: 'Abort' });
                   if (e.timedOut)
-                    return I('Request timeout', e, { name: 'Timeout' });
+                    return u('Request timeout', e, { name: 'Timeout' });
                   var n,
                     a = e.xhr;
                   switch (Math.floor(a.status / 100)) {
                     case 0:
                     case 2:
                       if (!t) return;
-                      return I(t.message, e);
+                      return u(t.message, e);
                     case 4:
                       if (404 === a.status && !e.errorOn404) return;
                       n = 'Client';
@@ -1974,7 +1974,7 @@
                     ' ' +
                     e.url +
                     '"';
-                  return I(r, e);
+                  return u(r, e);
                 })(e, t),
                 g = i || A.fromRequest(e);
               for (a = 0; a < n.length; a++)
@@ -5087,8 +5087,8 @@ object-assign
         A = f(n(21)),
         C = f(n(22)),
         s = f(n(23)),
-        u = f(n(24)),
-        I = f(n(25)),
+        I = f(n(24)),
+        u = f(n(25)),
         l = f(n(26)),
         c = f(n(27)),
         d = f(n(28)),
@@ -5105,8 +5105,8 @@ object-assign
         join: A.default,
         kick: C.default,
         leave: s.default,
-        list: u.default,
-        mark: I.default,
+        list: I.default,
+        mark: u.default,
         rename: l.default,
         setPurpose: c.default,
         setTopic: d.default,
@@ -5155,16 +5155,16 @@ object-assign
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var a = I(n(43)),
-        r = I(n(44)),
-        i = I(n(45)),
-        g = I(n(48)),
-        o = I(n(40)),
-        A = I(n(41)),
-        C = I(n(42)),
-        s = I(n(46)),
-        u = I(n(47));
-      function I(e) {
+      var a = u(n(43)),
+        r = u(n(44)),
+        i = u(n(45)),
+        g = u(n(48)),
+        o = u(n(40)),
+        A = u(n(41)),
+        C = u(n(42)),
+        s = u(n(46)),
+        I = u(n(47));
+      function u(e) {
         return e && e.__esModule ? e : { default: e };
       }
       (t.default = {
@@ -5174,7 +5174,7 @@ object-assign
         upload: g.default,
         comments: { add: o.default, delete: A.default, edit: C.default },
         revokePublicURL: s.default,
-        sharedPublicURL: u.default
+        sharedPublicURL: I.default
       }),
         (e.exports = t.default);
     },
@@ -5189,8 +5189,8 @@ object-assign
         A = m(n(54)),
         C = m(n(55)),
         s = m(n(56)),
-        u = m(n(57)),
-        I = m(n(58)),
+        I = m(n(57)),
+        u = m(n(58)),
         l = m(n(59)),
         c = m(n(60)),
         d = m(n(61)),
@@ -5209,8 +5209,8 @@ object-assign
         info: A.default,
         invite: C.default,
         kick: s.default,
-        leave: u.default,
-        list: I.default,
+        leave: I.default,
+        list: u.default,
         mark: l.default,
         open: c.default,
         rename: d.default,
@@ -5689,8 +5689,8 @@ object-assign
         A = null,
         C = 0,
         s = [],
-        u = n(147);
-      function I(e, t) {
+        I = n(147);
+      function u(e, t) {
         for (var n = 0; n < e.length; n++) {
           var a = e[n],
             r = i[a.id];
@@ -5801,7 +5801,7 @@ object-assign
                 var a = n.css,
                   r = n.sourceMap,
                   i = void 0 === t.convertToAbsoluteUrls && r;
-                (t.convertToAbsoluteUrls || i) && (a = u(a));
+                (t.convertToAbsoluteUrls || i) && (a = I(a));
                 r &&
                   (a +=
                     '\n/*# sourceMappingURL=data:application/json;base64,' +
@@ -5854,13 +5854,13 @@ object-assign
           t.insertAt || (t.insertAt = 'bottom');
         var n = l(e, t);
         return (
-          I(n, t),
+          u(n, t),
           function(e) {
             for (var a = [], r = 0; r < n.length; r++) {
               var g = n[r];
               (o = i[g.id]).refs--, a.push(o);
             }
-            e && I(l(e, t), t);
+            e && u(l(e, t), t);
             for (r = 0; r < a.length; r++) {
               var o;
               if (0 === (o = a[r]).refs) {
@@ -5949,8 +5949,8 @@ object-assign
         A = n(5),
         C = n.n(A),
         s = n(4),
-        u = n.n(s),
-        I = n(6),
+        I = n.n(s),
+        u = n(6),
         l = n(9);
       var c = function e(t) {
           !(function(e, t) {
@@ -5979,7 +5979,7 @@ object-assign
             i = e.username;
           return new Promise(function(e, g) {
             if ('' !== t)
-              return I.chat.postMessage(
+              return u.chat.postMessage(
                 { token: a, thread_ts: n, channel: r, text: t, username: i },
                 function(t, n) {
                   return t ? g(t) : e(n);
@@ -6173,7 +6173,7 @@ object-assign
               ((n =
                 !r || ('object' !== j(r) && 'function' != typeof r)
                   ? N(a)
-                  : r).bot = I.rtm.client()),
+                  : r).bot = u.rtm.client()),
               (n.state = {
                 failed: !1,
                 helpText: n.props.helpText,
@@ -6273,7 +6273,7 @@ object-assign
                       return o.a.createElement(
                         'div',
                         {
-                          className: u()(
+                          className: I()(
                             p.a.chat__msgRow,
                             r ? p.a.mine : p.a.notMine
                           ),
@@ -6289,7 +6289,7 @@ object-assign
                         o.a.createElement(
                           'div',
                           {
-                            className: u()(
+                            className: I()(
                               p.a.chat__message,
                               r ? p.a.mine : p.a.notMine
                             )
@@ -6312,9 +6312,9 @@ object-assign
                     }
                     return o.a.createElement(
                       'div',
-                      { className: u()(p.a.chat__msgRow), key: e.ts },
+                      { className: I()(p.a.chat__msgRow), key: e.ts },
                       o.a.createElement('div', {
-                        className: u()(p.a.chat__message, p.a.system__message),
+                        className: I()(p.a.chat__message, p.a.system__message),
                         dangerouslySetInnerHTML: { __html: t }
                       })
                     );
@@ -6331,7 +6331,7 @@ object-assign
                     o.a.createElement(
                       'div',
                       {
-                        className: u()(
+                        className: I()(
                           p.a.chat__msgRow,
                           n ? p.a.mine : p.a.notMine
                         ),
@@ -6346,7 +6346,7 @@ object-assign
                         : null,
                       A
                         ? o.a.createElement('div', {
-                            className: u()(
+                            className: I()(
                               p.a.chat__message,
                               g ? p.a.mentioned : ''
                             ),
@@ -6355,7 +6355,7 @@ object-assign
                         : o.a.createElement(
                             'div',
                             {
-                              className: u()(
+                              className: I()(
                                 p.a.chat__message,
                                 g ? p.a.mentioned : ''
                               )
@@ -6457,7 +6457,7 @@ object-assign
                     (this.chatInitiatedTs = Date.now() / 1e3);
                   var a = function() {
                     var a = n.state.messages.length;
-                    I.channels.history(
+                    u.channels.history(
                       { token: t.apiToken, channel: e.id },
                       function(r, i) {
                         if (r)
@@ -6773,218 +6773,207 @@ object-assign
                         a = P(t, 2),
                         r = a[0],
                         i = a[1];
-                      return (
-                        console.log({ key: r }),
-                        console.log({ value: i }),
+                      return o.a.createElement(
+                        'div',
+                        { key: r },
+                        ((n = i[r]),
                         o.a.createElement(
                           'div',
-                          { key: r },
-                          ((n = i[r]),
+                          null,
                           o.a.createElement(
                             'div',
-                            null,
+                            {
+                              style: n,
+                              className: I()(
+                                p.a.card,
+                                p.a.transition,
+                                e.state.chatbox.active ? p.a.active : '',
+                                e.state.chatbox.chatActiveView
+                                  ? p.a.chatActive
+                                  : ''
+                              ),
+                              onClick: e.openChatBox
+                            },
+                            o.a.createElement(
+                              'div',
+                              { className: p.a.helpHeader },
+                              e.state.newMessageNotification > 0 &&
+                                o.a.createElement(
+                                  'span',
+                                  { className: p.a.unreadNotificationsBadge },
+                                  e.state.newMessageNotification
+                                ),
+                              o.a.createElement(
+                                'h2',
+                                { className: p.a.transition },
+                                e.state.helpText || 'Help?'
+                              )
+                            ),
+                            o.a.createElement('div', {
+                              className: I()(p.a.card_circle, p.a.transition)
+                            }),
                             o.a.createElement(
                               'div',
                               {
-                                style: { props: n },
-                                className: u()(
-                                  p.a.card,
+                                className: I()(
+                                  p.a.channels,
                                   p.a.transition,
-                                  e.state.chatbox.active ? p.a.active : '',
-                                  e.state.chatbox.chatActiveView
-                                    ? p.a.chatActive
+                                  e.state.chatbox.channelActiveView
+                                    ? p.a.channelActive
                                     : ''
-                                ),
-                                onClick: e.openChatBox
-                              },
-                              o.a.createElement(
-                                'div',
-                                { className: p.a.helpHeader },
-                                e.state.newMessageNotification > 0 &&
-                                  o.a.createElement(
-                                    'span',
-                                    { className: p.a.unreadNotificationsBadge },
-                                    e.state.newMessageNotification
-                                  ),
-                                o.a.createElement(
-                                  'h2',
-                                  { className: p.a.transition },
-                                  e.state.helpText || 'Help?'
                                 )
-                              ),
-                              o.a.createElement('div', {
-                                className: u()(p.a.card_circle, p.a.transition)
-                              }),
-                              o.a.createElement(
-                                'div',
-                                {
-                                  className: u()(
-                                    p.a.channels,
-                                    p.a.transition,
-                                    e.state.chatbox.channelActiveView
-                                      ? p.a.channelActive
-                                      : ''
-                                  )
-                                },
-                                e.state.channels.map(function(t) {
-                                  return o.a.createElement(
-                                    'div',
-                                    {
-                                      className: p.a.contact,
-                                      key: t.id,
-                                      onClick: function(n) {
-                                        return e.goToChatView(n, t);
-                                      }
-                                    },
-                                    t.icon
-                                      ? o.a.createElement('img', {
-                                          src: t.icon,
-                                          className: p.a.contact__photo
-                                        })
-                                      : o.a.createElement('div', {
-                                          dangerouslySetInnerHTML: {
-                                            __html: x.a
-                                          },
-                                          className: p.a.contact__photo
-                                        }),
-                                    o.a.createElement(
-                                      'span',
-                                      { className: p.a.contact__name },
-                                      t.name
-                                    ),
-                                    o.a.createElement('span', {
-                                      className: u()(
-                                        p.a.contact__status,
-                                        p.a.online
-                                      )
-                                    })
-                                  );
-                                })
-                              ),
-                              o.a.createElement(
-                                'div',
-                                { className: u()(p.a.chat) },
-                                o.a.createElement(
+                              },
+                              e.state.channels.map(function(t) {
+                                return o.a.createElement(
                                   'div',
-                                  { className: u()(p.a.chatHeader) },
-                                  o.a.createElement('span', {
-                                    className: p.a.chat__back,
-                                    onClick: e.goToChannelView
-                                  }),
-                                  o.a.createElement(
-                                    'div',
-                                    { className: p.a.chat__person },
-                                    o.a.createElement(
-                                      'span',
-                                      { className: p.a.chat__status },
-                                      'status'
-                                    ),
-                                    o.a.createElement('span', {
-                                      className: u()(
-                                        p.a.chat__online,
-                                        p.a.active
-                                      )
-                                    }),
-                                    o.a.createElement(
-                                      'span',
-                                      { className: p.a.chat__name },
-                                      e.activeChannel.name
-                                    )
-                                  ),
-                                  e.activeChannel.icon
+                                  {
+                                    className: p.a.contact,
+                                    key: t.id,
+                                    onClick: function(n) {
+                                      return e.goToChatView(n, t);
+                                    }
+                                  },
+                                  t.icon
                                     ? o.a.createElement('img', {
-                                        src: e.activeChannel.icon,
-                                        className: p.a.channel__header__photo
+                                        src: t.icon,
+                                        className: p.a.contact__photo
                                       })
                                     : o.a.createElement('div', {
                                         dangerouslySetInnerHTML: {
                                           __html: x.a
                                         },
-                                        className: p.a.channel__header__photo
+                                        className: p.a.contact__photo
                                       }),
-                                  e.props.closeChatButton
-                                    ? o.a.createElement(
-                                        'button',
-                                        {
-                                          className: p.a.channel__close__button,
-                                          onClick: e.closeChatBox
-                                        },
-                                        '×'
-                                      )
-                                    : null
-                                ),
-                                o.a.createElement(
-                                  'div',
-                                  {
-                                    className: p.a.chat__messages,
-                                    id: 'widget-reactSlakChatMessages'
-                                  },
-                                  e.state.messages.map(function(t) {
-                                    return e.displayFormattedMessage(t);
+                                  o.a.createElement(
+                                    'span',
+                                    { className: p.a.contact__name },
+                                    t.name
+                                  ),
+                                  o.a.createElement('span', {
+                                    className: I()(
+                                      p.a.contact__status,
+                                      p.a.online
+                                    )
                                   })
-                                ),
+                                );
+                              })
+                            ),
+                            o.a.createElement(
+                              'div',
+                              { className: I()(p.a.chat) },
+                              o.a.createElement(
+                                'div',
+                                { className: I()(p.a.chatHeader) },
+                                o.a.createElement('span', {
+                                  className: p.a.chat__back,
+                                  onClick: e.goToChannelView
+                                }),
                                 o.a.createElement(
                                   'div',
-                                  null,
-                                  e.state.fileUploadLoader
-                                    ? o.a.createElement(
-                                        'div',
-                                        {
-                                          className: p.a.chat__file__uploading
-                                        },
-                                        o.a.createElement(
-                                          'span',
-                                          { className: p.a.loading },
-                                          'Uploading'
-                                        )
+                                  { className: p.a.chat__person },
+                                  o.a.createElement(
+                                    'span',
+                                    { className: p.a.chat__status },
+                                    'status'
+                                  ),
+                                  o.a.createElement('span', {
+                                    className: I()(p.a.chat__online, p.a.active)
+                                  }),
+                                  o.a.createElement(
+                                    'span',
+                                    { className: p.a.chat__name },
+                                    e.activeChannel.name
+                                  )
+                                ),
+                                e.activeChannel.icon
+                                  ? o.a.createElement('img', {
+                                      src: e.activeChannel.icon,
+                                      className: p.a.channel__header__photo
+                                    })
+                                  : o.a.createElement('div', {
+                                      dangerouslySetInnerHTML: { __html: x.a },
+                                      className: p.a.channel__header__photo
+                                    }),
+                                e.props.closeChatButton
+                                  ? o.a.createElement(
+                                      'button',
+                                      {
+                                        className: p.a.channel__close__button,
+                                        onClick: e.closeChatBox
+                                      },
+                                      '×'
+                                    )
+                                  : null
+                              ),
+                              o.a.createElement(
+                                'div',
+                                {
+                                  className: p.a.chat__messages,
+                                  id: 'widget-reactSlakChatMessages'
+                                },
+                                e.state.messages.map(function(t) {
+                                  return e.displayFormattedMessage(t);
+                                })
+                              ),
+                              o.a.createElement(
+                                'div',
+                                null,
+                                e.state.fileUploadLoader
+                                  ? o.a.createElement(
+                                      'div',
+                                      { className: p.a.chat__file__uploading },
+                                      o.a.createElement(
+                                        'span',
+                                        { className: p.a.loading },
+                                        'Uploading'
                                       )
-                                    : null,
-                                  e.state.fileUploadLoader
-                                    ? null
-                                    : o.a.createElement(
+                                    )
+                                  : null,
+                                e.state.fileUploadLoader
+                                  ? null
+                                  : o.a.createElement(
+                                      'div',
+                                      null,
+                                      o.a.createElement(
                                         'div',
-                                        null,
+                                        { className: p.a.attachment },
                                         o.a.createElement(
-                                          'div',
-                                          { className: p.a.attachment },
-                                          o.a.createElement(
-                                            'label',
-                                            {
-                                              htmlFor: 'chat__upload',
-                                              className: p.a.attachmentIcon
-                                            },
-                                            o.a.createElement('input', {
-                                              type: 'file',
-                                              id: 'chat__upload',
-                                              className: p.a.chat__upload,
-                                              value: e.state.postMyFile,
-                                              onChange: function(t) {
-                                                return e.handleFileChange(t);
-                                              }
-                                            })
-                                          )
-                                        ),
-                                        o.a.createElement('input', {
-                                          type: 'text',
-                                          id: 'chat__input__text',
-                                          className: p.a.chat__input,
-                                          value: e.state.postMyMessage,
-                                          placeholder: 'Enter your message...',
-                                          onKeyPress: function(t) {
-                                            return 'Enter' === t.key
-                                              ? e.postMyMessage()
-                                              : null;
+                                          'label',
+                                          {
+                                            htmlFor: 'chat__upload',
+                                            className: p.a.attachmentIcon
                                           },
-                                          onChange: function(t) {
-                                            return e.handleChange(t);
-                                          }
-                                        })
-                                      )
-                                )
+                                          o.a.createElement('input', {
+                                            type: 'file',
+                                            id: 'chat__upload',
+                                            className: p.a.chat__upload,
+                                            value: e.state.postMyFile,
+                                            onChange: function(t) {
+                                              return e.handleFileChange(t);
+                                            }
+                                          })
+                                        )
+                                      ),
+                                      o.a.createElement('input', {
+                                        type: 'text',
+                                        id: 'chat__input__text',
+                                        className: p.a.chat__input,
+                                        value: e.state.postMyMessage,
+                                        placeholder: 'Enter your message...',
+                                        onKeyPress: function(t) {
+                                          return 'Enter' === t.key
+                                            ? e.postMyMessage()
+                                            : null;
+                                        },
+                                        onChange: function(t) {
+                                          return e.handleChange(t);
+                                        }
+                                      })
+                                    )
                               )
                             )
-                          ))
-                        )
+                          )
+                        ))
                       );
                     })
                   );

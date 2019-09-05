@@ -661,7 +661,7 @@ class ReactSlackChat extends Component {
     const chatbox = props => (
       <div>
         <div
-          style={{ props }}
+          style={props}
           className={classNames(
             styles.card,
             styles.transition,
@@ -795,8 +795,6 @@ class ReactSlackChat extends Component {
     return (
       <div>
         {Object.entries(this.props.chatStyles).map(([key, value]) => {
-          console.log({ key });
-          console.log({ value });
           return (
             // <div>{key} : {value.toString()}</div>
             <div key={key}>{chatbox(value[key])}</div>
