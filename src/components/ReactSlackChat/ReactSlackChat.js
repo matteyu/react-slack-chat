@@ -43,7 +43,7 @@ class ReactSlackChat extends Component {
     this.state = {
       // failed flag
       failed: false,
-      helpText: this.props.helpText,
+      helpText: '',
       // List of Online users
       onlineUsers: [],
       channels: [],
@@ -56,7 +56,14 @@ class ReactSlackChat extends Component {
         active: false,
         channelActiveView: false,
         chatActiveView: false
-      }
+      },
+      botName: '',
+      apiToken: '',
+      importedChannels: [],
+      themeColor: '',
+      userImage: '',
+      debugMode: false,
+      hooks: []
     };
     // Set class variables
     // Base64 decode the API Token
@@ -68,7 +75,7 @@ class ReactSlackChat extends Component {
     this.messageFormatter = {
       emoji: false // default
     };
-    this.fileUploadTitle = `Posted by ${this.props.botName}`;
+    this.fileUploadTitle = `Posted by ${this.state.botName}`;
 
     // Theme variables
     this.themeDefaultColor = '#2e7eea'; // Defined as $theme_color sass variable in .scss
@@ -128,7 +135,7 @@ class ReactSlackChat extends Component {
     // decode formatting from messages text to html text
     let messageText = decodeHtml(message.text);
     // who's message is this?
-    const myMessage = message.username === this.props.botName;
+    const myMessage = message.username === this.state.botName;
     // Check to see if this is a Slack System message?
     if (isSystemMessage(message)) {
       // message.text is a system message
@@ -152,7 +159,7 @@ class ReactSlackChat extends Component {
               {didIPostIt ? (
                 // show customer image
                 <img
-                  src={this.props.userImage}
+                  src={this.state.userImage}
                   className={styles.user__contact__photo}
                   alt="userIcon"
                 />
@@ -193,7 +200,7 @@ class ReactSlackChat extends Component {
       return null;
     }
     // check if user was mentioned by anyone else remotely
-    const mentioned = wasIMentioned(message, this.props.botName);
+    const mentioned = wasIMentioned(message, this.state.botName);
 
     const textHasEmoji = hasEmoji(messageText);
     // check if emoji library is enabled
@@ -212,7 +219,7 @@ class ReactSlackChat extends Component {
         {myMessage ? (
           // show customer image
           <img
-            src={this.props.userImage}
+            src={this.state.userImage}
             className={styles.user__contact__photo}
             alt="userIcon"
           />
@@ -271,7 +278,7 @@ class ReactSlackChat extends Component {
           // get the channels we need
           const channels = [];
           payload.channels.map(channel => {
-            this.props.channels.forEach(channelObject => {
+            this.state.importedChannels.forEach(channelObject => {
               // If this channel is exactly as requested
               if (
                 channelObject.name === channel.name ||
@@ -312,7 +319,7 @@ class ReactSlackChat extends Component {
       ],
       apiToken: this.apiToken,
       channel: this.activeChannel.id,
-      username: this.props.botName
+      username: this.state.botName
     })
       .then(data => {
         this.setState(
@@ -377,7 +384,7 @@ class ReactSlackChat extends Component {
               const newMessages = getNewMessages(
                 this.state.messages,
                 data.messages,
-                this.props.botName
+                this.state.botName
               );
               this.gotNewMessages(newMessages);
 
@@ -386,8 +393,8 @@ class ReactSlackChat extends Component {
                 ? newMessages.map(message =>
                     execHooksIfFound({
                       message,
-                      username: this.props.botName,
-                      customHooks: this.props.hooks,
+                      username: this.state.botName,
+                      customHooks: this.state.hooks,
                       apiToken: this.apiToken,
                       channel: this.activeChannel.id
                     })
@@ -635,11 +642,11 @@ class ReactSlackChat extends Component {
   componentDidMount() {
     // Look if custom color / theme is needed
     // If yes, change backgrounds
-    if (this.props.themeColor) {
+    if (this.state.themeColor) {
       changeColorRecursive(
         document.body,
         this.themeDefaultColor,
-        this.props.themeColor
+        this.state.themeColor
       );
     }
 
@@ -658,146 +665,159 @@ class ReactSlackChat extends Component {
     }
 
     // Looks like nothing failed, let's start to render our chatbox
-    const chatbox = props => (
-      <div>
-        <div
-          style={props}
-          className={classNames(
-            styles.card,
-            styles.transition,
-            this.state.chatbox.active ? styles.active : '',
-            this.state.chatbox.chatActiveView ? styles.chatActive : ''
-          )}
-          onClick={this.openChatBox}
-        >
-          <div className={styles.helpHeader}>
-            {this.state.newMessageNotification > 0 && (
-              <span className={styles.unreadNotificationsBadge}>
-                {this.state.newMessageNotification}
-              </span>
-            )}
-            <h2 className={styles.transition}>
-              {this.state.helpText || 'Help?'}
-            </h2>
-          </div>
-          <div className={classNames(styles.card_circle, styles.transition)} />
+    const chatbox = (props, configProps) =>
+      this.setState({ botName: configProps['botName'] }) &&
+      this.setState({ apiToken: configProps['apiToken'] }) &&
+      this.setState({ importedChannels: configProps['channels'] }) &&
+      this.setState({ helpText: configProps['helpText'] }) &&
+      this.setState({ themeColor: configProps['themeColor'] }) &&
+      this.setState({ userImage: configProps['userImage'] }) &&
+      this.setState({ debugMode: configProps['debugMode'] }) &&
+      this.setState({ hooks: configProps['hook'] }) && (
+        <div>
           <div
+            style={props}
             className={classNames(
-              styles.channels,
+              styles.card,
               styles.transition,
-              this.state.chatbox.channelActiveView ? styles.channelActive : ''
+              this.state.chatbox.active ? styles.active : '',
+              this.state.chatbox.chatActiveView ? styles.chatActive : ''
             )}
+            onClick={this.openChatBox}
           >
-            {this.state.channels.map(channel => (
-              <div
-                className={styles.contact}
-                key={channel.id}
-                onClick={e => this.goToChatView(e, channel)}
-              >
-                {channel.icon ? (
-                  <img src={channel.icon} className={styles.contact__photo} />
+            <div className={styles.helpHeader}>
+              {this.state.newMessageNotification > 0 && (
+                <span className={styles.unreadNotificationsBadge}>
+                  {this.state.newMessageNotification}
+                </span>
+              )}
+              <h2 className={styles.transition}>
+                {this.state.helpText || 'Help?'}
+              </h2>
+            </div>
+            <div
+              className={classNames(styles.card_circle, styles.transition)}
+            />
+            <div
+              className={classNames(
+                styles.channels,
+                styles.transition,
+                this.state.chatbox.channelActiveView ? styles.channelActive : ''
+              )}
+            >
+              {this.state.channels.map(channel => (
+                <div
+                  className={styles.contact}
+                  key={channel.id}
+                  onClick={e => this.goToChatView(e, channel)}
+                >
+                  {channel.icon ? (
+                    <img src={channel.icon} className={styles.contact__photo} />
+                  ) : (
+                    <div
+                      dangerouslySetInnerHTML={{ __html: defaultChannelIcon }}
+                      className={styles.contact__photo}
+                    />
+                  )}
+                  <span className={styles.contact__name}>{channel.name}</span>
+                  <span
+                    className={classNames(
+                      styles.contact__status,
+                      styles.online
+                    )}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className={classNames(styles.chat)}>
+              <div className={classNames(styles.chatHeader)}>
+                <span
+                  className={styles.chat__back}
+                  onClick={this.goToChannelView}
+                />
+                <div className={styles.chat__person}>
+                  <span className={styles.chat__status}>status</span>
+                  <span
+                    className={classNames(styles.chat__online, styles.active)}
+                  />
+                  <span className={styles.chat__name}>
+                    {this.activeChannel.name}
+                  </span>
+                </div>
+                {this.activeChannel.icon ? (
+                  <img
+                    src={this.activeChannel.icon}
+                    className={styles.channel__header__photo}
+                  />
                 ) : (
                   <div
                     dangerouslySetInnerHTML={{ __html: defaultChannelIcon }}
-                    className={styles.contact__photo}
+                    className={styles.channel__header__photo}
                   />
                 )}
-                <span className={styles.contact__name}>{channel.name}</span>
-                <span
-                  className={classNames(styles.contact__status, styles.online)}
-                />
+                {this.props.closeChatButton ? (
+                  <button
+                    className={styles.channel__close__button}
+                    onClick={this.closeChatBox}
+                  >
+                    ×
+                  </button>
+                ) : null}
               </div>
-            ))}
-          </div>
-          <div className={classNames(styles.chat)}>
-            <div className={classNames(styles.chatHeader)}>
-              <span
-                className={styles.chat__back}
-                onClick={this.goToChannelView}
-              />
-              <div className={styles.chat__person}>
-                <span className={styles.chat__status}>status</span>
-                <span
-                  className={classNames(styles.chat__online, styles.active)}
-                />
-                <span className={styles.chat__name}>
-                  {this.activeChannel.name}
-                </span>
+              <div
+                className={styles.chat__messages}
+                id="widget-reactSlakChatMessages"
+              >
+                {this.state.messages.map(message =>
+                  this.displayFormattedMessage(message)
+                )}
               </div>
-              {this.activeChannel.icon ? (
-                <img
-                  src={this.activeChannel.icon}
-                  className={styles.channel__header__photo}
-                />
-              ) : (
-                <div
-                  dangerouslySetInnerHTML={{ __html: defaultChannelIcon }}
-                  className={styles.channel__header__photo}
-                />
-              )}
-              {this.props.closeChatButton ? (
-                <button
-                  className={styles.channel__close__button}
-                  onClick={this.closeChatBox}
-                >
-                  ×
-                </button>
-              ) : null}
-            </div>
-            <div
-              className={styles.chat__messages}
-              id="widget-reactSlakChatMessages"
-            >
-              {this.state.messages.map(message =>
-                this.displayFormattedMessage(message)
-              )}
-            </div>
-            <div>
-              {this.state.fileUploadLoader ? (
-                <div className={styles.chat__file__uploading}>
-                  <span className={styles.loading}>Uploading</span>
-                </div>
-              ) : null}
-              {!this.state.fileUploadLoader ? (
-                <div>
-                  <div className={styles.attachment}>
-                    <label
-                      htmlFor="chat__upload"
-                      className={styles.attachmentIcon}
-                    >
-                      <input
-                        type="file"
-                        id="chat__upload"
-                        className={styles.chat__upload}
-                        value={this.state.postMyFile}
-                        onChange={e => this.handleFileChange(e)}
-                      />
-                    </label>
+              <div>
+                {this.state.fileUploadLoader ? (
+                  <div className={styles.chat__file__uploading}>
+                    <span className={styles.loading}>Uploading</span>
                   </div>
-                  <input
-                    type="text"
-                    id="chat__input__text"
-                    className={styles.chat__input}
-                    value={this.state.postMyMessage}
-                    placeholder="Enter your message..."
-                    onKeyPress={e =>
-                      e.key === 'Enter' ? this.postMyMessage() : null
-                    }
-                    onChange={e => this.handleChange(e)}
-                  />
-                </div>
-              ) : null}
+                ) : null}
+                {!this.state.fileUploadLoader ? (
+                  <div>
+                    <div className={styles.attachment}>
+                      <label
+                        htmlFor="chat__upload"
+                        className={styles.attachmentIcon}
+                      >
+                        <input
+                          type="file"
+                          id="chat__upload"
+                          className={styles.chat__upload}
+                          value={this.state.postMyFile}
+                          onChange={e => this.handleFileChange(e)}
+                        />
+                      </label>
+                    </div>
+                    <input
+                      type="text"
+                      id="chat__input__text"
+                      className={styles.chat__input}
+                      value={this.state.postMyMessage}
+                      placeholder="Enter your message..."
+                      onKeyPress={e =>
+                        e.key === 'Enter' ? this.postMyMessage() : null
+                      }
+                      onChange={e => this.handleChange(e)}
+                    />
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
     return (
       <div>
         {Object.entries(this.props.chatStyles).map(([key, value]) => {
           return (
             // <div>{key} : {value.toString()}</div>
-            <div key={key}>{chatbox(value[key])}</div>
+            <div key={key}>{chatbox(value['styling'], value[key])}</div>
           );
         })}
       </div>
