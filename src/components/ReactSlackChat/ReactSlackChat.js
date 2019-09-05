@@ -658,13 +658,10 @@ class ReactSlackChat extends Component {
     }
 
     // Looks like nothing failed, let's start to render our chatbox
-    const chatbox = (
+    const chatbox = props => (
       <div>
         <div
-          style={{
-            position: 'fixed',
-            left: '1%'
-          }}
+          style={{ props }}
           className={classNames(
             styles.card,
             styles.transition,
@@ -798,8 +795,12 @@ class ReactSlackChat extends Component {
 
     return (
       <div>
-        <div>{chatbox}</div>
-        <div>{chatbox}</div>
+        {Object.entries(this.props.chatStyles).map(([key, value]) => {
+          return (
+            // <div>{key} : {value.toString()}</div>
+            <div key={key}>{() => chatbox(value)}</div>
+          );
+        })}
       </div>
     );
   }
