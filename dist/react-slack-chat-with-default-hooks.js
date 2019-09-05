@@ -7750,17 +7750,18 @@ object-assign
                 value: function() {
                   var e = this;
                   if (this.state.failed) return !1;
-                  return (
-                    console.log(this.props.chatStyles),
-                    o.a.createElement(
-                      'div',
-                      null,
-                      Object.entries(this.props.chatStyles).map(function(A) {
-                        var n,
-                          t = U(A, 2),
-                          r = t[0],
-                          a = t[1];
-                        return o.a.createElement(
+                  return o.a.createElement(
+                    'div',
+                    null,
+                    Object.entries(this.props.chatStyles).map(function(A) {
+                      var n,
+                        t = U(A, 2),
+                        r = t[0],
+                        a = t[1];
+                      return (
+                        console.log({ key: r }),
+                        console.log({ value: a }),
+                        o.a.createElement(
                           'div',
                           { key: r },
                           ((n = a),
@@ -7968,9 +7969,9 @@ object-assign
                               )
                             )
                           ))
-                        );
-                      })
-                    )
+                        )
+                      );
+                    })
                   );
                 }
               }
