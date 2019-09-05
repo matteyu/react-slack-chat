@@ -12,7 +12,7 @@
   }
 })(window, function(
   __WEBPACK_EXTERNAL_MODULE__3__,
-  __WEBPACK_EXTERNAL_MODULE__6__
+  __WEBPACK_EXTERNAL_MODULE__113__
 ) {
   return (function(e) {
     var A = {};
@@ -164,8 +164,8 @@
         n.d(A, 'a', function() {
           return g;
         });
-      var t = n(8),
-        r = n(7),
+      var t = n(7),
+        r = n(6),
         a = function(e) {
           var A = e.text,
             n = e.lastThreadTs,
@@ -286,9 +286,6 @@
               }.apply(A, [])) || (e.exports = t);
       })();
     },
-    function(e, A) {
-      e.exports = __WEBPACK_EXTERNAL_MODULE__6__;
-    },
     function(e, A, n) {
       'use strict';
       n.r(A),
@@ -309,11 +306,11 @@
       var t = U(n(114)),
         r = U(n(125)),
         a = U(n(128)),
-        o = U(n(16)),
+        o = U(n(15)),
         i = U(n(129)),
         s = U(n(130)),
         c = U(n(131)),
-        _ = U(n(41)),
+        _ = U(n(40)),
         l = U(n(132)),
         u = U(n(133)),
         g = U(n(134)),
@@ -323,7 +320,7 @@
         I = U(n(138)),
         f = U(n(139)),
         B = U(n(140)),
-        h = U(n(10)),
+        h = U(n(9)),
         E = U(n(142)),
         m = U(n(143)),
         w = U(n(144)),
@@ -495,8 +492,8 @@
     },
     function(e, A, n) {
       'use strict';
-      var t = n(14),
-        r = n(15);
+      var t = n(13),
+        r = n(14);
       function a(e) {
         (this.request = e.request),
           (this.xhr = e.xhr),
@@ -546,7 +543,7 @@
     },
     function(e, A, n) {
       'use strict';
-      var t = n(9);
+      var t = n(8);
       e.exports = function(e) {
         var A = e.xhr,
           n = { request: e, xhr: A };
@@ -2906,6 +2903,9 @@
         }),
         (module.exports = factory());
     },
+    function(e, A) {
+      e.exports = __WEBPACK_EXTERNAL_MODULE__113__;
+    },
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 }),
@@ -2928,9 +2928,9 @@
         a = n(117),
         o = n(118),
         i = n(119),
-        s = n(13),
-        c = n(14),
-        _ = n(9),
+        s = n(12),
+        c = n(13),
+        _ = n(8),
         l = n(120),
         u = i.create;
       e.exports = (function e(A, n) {
@@ -3081,9 +3081,9 @@
     },
     function(e, A, n) {
       'use strict';
-      var t = n(13),
-        r = n(15),
-        a = n(9);
+      var t = n(12),
+        r = n(14),
+        a = n(8);
       function o(e, A) {
         var n = new Error(e);
         for (var t in ((n.name = 'RequestError'),
@@ -5740,292 +5740,292 @@ object-assign
             (A.users = {}),
             (A.users.profile = {}),
             (A.auth.test = function(A, t) {
-              (A.token = e), n(16).call({}, A, t);
+              (A.token = e), n(15).call({}, A, t);
             }),
             (A.bots.info = function(A, t) {
-              (A.token = e), n(17).call({}, A, t);
+              (A.token = e), n(16).call({}, A, t);
             }),
             (A.channels.archive = function(A, t) {
-              (A.token = e), n(18).call({}, A, t);
+              (A.token = e), n(17).call({}, A, t);
             }),
             (A.channels.create = function(A, t) {
-              (A.token = e), n(19).call({}, A, t);
+              (A.token = e), n(18).call({}, A, t);
             }),
             (A.channels.history = function(A, t) {
-              (A.token = e), n(20).call({}, A, t);
+              (A.token = e), n(19).call({}, A, t);
             }),
             (A.channels.info = function(A, t) {
-              (A.token = e), n(21).call({}, A, t);
+              (A.token = e), n(20).call({}, A, t);
             }),
             (A.channels.invite = function(A, t) {
-              (A.token = e), n(22).call({}, A, t);
+              (A.token = e), n(21).call({}, A, t);
             }),
             (A.channels.join = function(A, t) {
-              (A.token = e), n(23).call({}, A, t);
+              (A.token = e), n(22).call({}, A, t);
             }),
             (A.channels.kick = function(A, t) {
-              (A.token = e), n(24).call({}, A, t);
+              (A.token = e), n(23).call({}, A, t);
             }),
             (A.channels.leave = function(A, t) {
-              (A.token = e), n(25).call({}, A, t);
+              (A.token = e), n(24).call({}, A, t);
             }),
             (A.channels.list = function(A, t) {
-              (A.token = e), n(26).call({}, A, t);
+              (A.token = e), n(25).call({}, A, t);
             }),
             (A.channels.mark = function(A, t) {
-              (A.token = e), n(27).call({}, A, t);
+              (A.token = e), n(26).call({}, A, t);
             }),
             (A.channels.rename = function(A, t) {
-              (A.token = e), n(28).call({}, A, t);
+              (A.token = e), n(27).call({}, A, t);
             }),
             (A.channels.setPurpose = function(A, t) {
-              (A.token = e), n(29).call({}, A, t);
+              (A.token = e), n(28).call({}, A, t);
             }),
             (A.channels.setTopic = function(A, t) {
-              (A.token = e), n(30).call({}, A, t);
+              (A.token = e), n(29).call({}, A, t);
             }),
             (A.channels.unarchive = function(A, t) {
-              (A.token = e), n(31).call({}, A, t);
+              (A.token = e), n(30).call({}, A, t);
             }),
             (A.chat.delete = function(A, t) {
-              (A.token = e), n(32).call({}, A, t);
+              (A.token = e), n(31).call({}, A, t);
             }),
             (A.chat.meMessage = function(A, t) {
-              (A.token = e), n(33).call({}, A, t);
+              (A.token = e), n(32).call({}, A, t);
             }),
             (A.chat.postMessage = function(A, t) {
-              (A.token = e), n(34).call({}, A, t);
+              (A.token = e), n(33).call({}, A, t);
             }),
             (A.chat.update = function(A, t) {
-              (A.token = e), n(35).call({}, A, t);
+              (A.token = e), n(34).call({}, A, t);
             }),
             (A.dnd.endDnd = function(A, t) {
-              (A.token = e), n(36).call({}, A, t);
+              (A.token = e), n(35).call({}, A, t);
             }),
             (A.dnd.endSnooze = function(A, t) {
-              (A.token = e), n(37).call({}, A, t);
+              (A.token = e), n(36).call({}, A, t);
             }),
             (A.dnd.info = function(A, t) {
-              (A.token = e), n(38).call({}, A, t);
+              (A.token = e), n(37).call({}, A, t);
             }),
             (A.dnd.setSnooze = function(A, t) {
-              (A.token = e), n(39).call({}, A, t);
+              (A.token = e), n(38).call({}, A, t);
             }),
             (A.dnd.teamInfo = function(A, t) {
-              (A.token = e), n(40).call({}, A, t);
+              (A.token = e), n(39).call({}, A, t);
             }),
             (A.emoji.list = function(A, t) {
-              (A.token = e), n(41).call({}, A, t);
+              (A.token = e), n(40).call({}, A, t);
             }),
             (A.files.comments.add = function(A, t) {
-              (A.token = e), n(42).call({}, A, t);
+              (A.token = e), n(41).call({}, A, t);
             }),
             (A.files.comments.delete = function(A, t) {
-              (A.token = e), n(43).call({}, A, t);
+              (A.token = e), n(42).call({}, A, t);
             }),
             (A.files.comments.edit = function(A, t) {
-              (A.token = e), n(44).call({}, A, t);
+              (A.token = e), n(43).call({}, A, t);
             }),
             (A.files.delete = function(A, t) {
-              (A.token = e), n(45).call({}, A, t);
+              (A.token = e), n(44).call({}, A, t);
             }),
             (A.files.info = function(A, t) {
-              (A.token = e), n(46).call({}, A, t);
+              (A.token = e), n(45).call({}, A, t);
             }),
             (A.files.list = function(A, t) {
-              (A.token = e), n(47).call({}, A, t);
+              (A.token = e), n(46).call({}, A, t);
             }),
             (A.files.revokePublicURL = function(A, t) {
-              (A.token = e), n(48).call({}, A, t);
+              (A.token = e), n(47).call({}, A, t);
             }),
             (A.files.sharedPublicURL = function(A, t) {
-              (A.token = e), n(49).call({}, A, t);
+              (A.token = e), n(48).call({}, A, t);
             }),
             (A.files.upload = function(A, t) {
-              (A.token = e), n(50).call({}, A, t);
+              (A.token = e), n(49).call({}, A, t);
             }),
             (A.groups.archive = function(A, t) {
-              (A.token = e), n(51).call({}, A, t);
+              (A.token = e), n(50).call({}, A, t);
             }),
             (A.groups.close = function(A, t) {
-              (A.token = e), n(52).call({}, A, t);
+              (A.token = e), n(51).call({}, A, t);
             }),
             (A.groups.create = function(A, t) {
-              (A.token = e), n(53).call({}, A, t);
+              (A.token = e), n(52).call({}, A, t);
             }),
             (A.groups.createChild = function(A, t) {
-              (A.token = e), n(54).call({}, A, t);
+              (A.token = e), n(53).call({}, A, t);
             }),
             (A.groups.history = function(A, t) {
-              (A.token = e), n(55).call({}, A, t);
+              (A.token = e), n(54).call({}, A, t);
             }),
             (A.groups.info = function(A, t) {
-              (A.token = e), n(56).call({}, A, t);
+              (A.token = e), n(55).call({}, A, t);
             }),
             (A.groups.invite = function(A, t) {
-              (A.token = e), n(57).call({}, A, t);
+              (A.token = e), n(56).call({}, A, t);
             }),
             (A.groups.kick = function(A, t) {
-              (A.token = e), n(58).call({}, A, t);
+              (A.token = e), n(57).call({}, A, t);
             }),
             (A.groups.leave = function(A, t) {
-              (A.token = e), n(59).call({}, A, t);
+              (A.token = e), n(58).call({}, A, t);
             }),
             (A.groups.list = function(A, t) {
-              (A.token = e), n(60).call({}, A, t);
+              (A.token = e), n(59).call({}, A, t);
             }),
             (A.groups.mark = function(A, t) {
-              (A.token = e), n(61).call({}, A, t);
+              (A.token = e), n(60).call({}, A, t);
             }),
             (A.groups.open = function(A, t) {
-              (A.token = e), n(62).call({}, A, t);
+              (A.token = e), n(61).call({}, A, t);
             }),
             (A.groups.rename = function(A, t) {
-              (A.token = e), n(63).call({}, A, t);
+              (A.token = e), n(62).call({}, A, t);
             }),
             (A.groups.setPurpose = function(A, t) {
-              (A.token = e), n(64).call({}, A, t);
+              (A.token = e), n(63).call({}, A, t);
             }),
             (A.groups.setTopic = function(A, t) {
-              (A.token = e), n(65).call({}, A, t);
+              (A.token = e), n(64).call({}, A, t);
             }),
             (A.groups.unarchive = function(A, t) {
-              (A.token = e), n(66).call({}, A, t);
+              (A.token = e), n(65).call({}, A, t);
             }),
             (A.im.close = function(A, t) {
-              (A.token = e), n(67).call({}, A, t);
+              (A.token = e), n(66).call({}, A, t);
             }),
             (A.im.history = function(A, t) {
-              (A.token = e), n(68).call({}, A, t);
+              (A.token = e), n(67).call({}, A, t);
             }),
             (A.im.list = function(A, t) {
-              (A.token = e), n(69).call({}, A, t);
+              (A.token = e), n(68).call({}, A, t);
             }),
             (A.im.mark = function(A, t) {
-              (A.token = e), n(70).call({}, A, t);
+              (A.token = e), n(69).call({}, A, t);
             }),
             (A.im.open = function(A, t) {
-              (A.token = e), n(71).call({}, A, t);
+              (A.token = e), n(70).call({}, A, t);
             }),
             (A.mpim.close = function(A, t) {
-              (A.token = e), n(72).call({}, A, t);
+              (A.token = e), n(71).call({}, A, t);
             }),
             (A.mpim.history = function(A, t) {
-              (A.token = e), n(73).call({}, A, t);
+              (A.token = e), n(72).call({}, A, t);
             }),
             (A.mpim.list = function(A, t) {
-              (A.token = e), n(74).call({}, A, t);
+              (A.token = e), n(73).call({}, A, t);
             }),
             (A.mpim.mark = function(A, t) {
-              (A.token = e), n(75).call({}, A, t);
+              (A.token = e), n(74).call({}, A, t);
             }),
             (A.mpim.open = function(A, t) {
-              (A.token = e), n(76).call({}, A, t);
+              (A.token = e), n(75).call({}, A, t);
             }),
             (A.pins.add = function(A, t) {
-              (A.token = e), n(77).call({}, A, t);
+              (A.token = e), n(76).call({}, A, t);
             }),
             (A.pins.list = function(A, t) {
-              (A.token = e), n(78).call({}, A, t);
+              (A.token = e), n(77).call({}, A, t);
             }),
             (A.pins.remove = function(A, t) {
-              (A.token = e), n(79).call({}, A, t);
+              (A.token = e), n(78).call({}, A, t);
             }),
             (A.reactions.add = function(A, t) {
-              (A.token = e), n(80).call({}, A, t);
+              (A.token = e), n(79).call({}, A, t);
             }),
             (A.reactions.get = function(A, t) {
-              (A.token = e), n(81).call({}, A, t);
+              (A.token = e), n(80).call({}, A, t);
             }),
             (A.reactions.list = function(A, t) {
-              (A.token = e), n(82).call({}, A, t);
+              (A.token = e), n(81).call({}, A, t);
             }),
             (A.reactions.remove = function(A, t) {
-              (A.token = e), n(83).call({}, A, t);
+              (A.token = e), n(82).call({}, A, t);
             }),
             (A.reminders.add = function(A, t) {
-              (A.token = e), n(84).call({}, A, t);
+              (A.token = e), n(83).call({}, A, t);
             }),
             (A.reminders.complete = function(A, t) {
-              (A.token = e), n(85).call({}, A, t);
+              (A.token = e), n(84).call({}, A, t);
             }),
             (A.reminders.delete = function(A, t) {
-              (A.token = e), n(86).call({}, A, t);
+              (A.token = e), n(85).call({}, A, t);
             }),
             (A.reminders.info = function(A, t) {
-              (A.token = e), n(87).call({}, A, t);
+              (A.token = e), n(86).call({}, A, t);
             }),
             (A.reminders.list = function(A, t) {
-              (A.token = e), n(88).call({}, A, t);
+              (A.token = e), n(87).call({}, A, t);
             }),
             (A.rtm.start = function(A, t) {
-              (A.token = e), n(10).call({}, A, t);
+              (A.token = e), n(9).call({}, A, t);
             }),
             (A.search.all = function(A, t) {
-              (A.token = e), n(89).call({}, A, t);
+              (A.token = e), n(88).call({}, A, t);
             }),
             (A.search.files = function(A, t) {
-              (A.token = e), n(90).call({}, A, t);
+              (A.token = e), n(89).call({}, A, t);
             }),
             (A.search.messages = function(A, t) {
-              (A.token = e), n(91).call({}, A, t);
+              (A.token = e), n(90).call({}, A, t);
             }),
             (A.stars.add = function(A, t) {
-              (A.token = e), n(92).call({}, A, t);
+              (A.token = e), n(91).call({}, A, t);
             }),
             (A.stars.list = function(A, t) {
-              (A.token = e), n(93).call({}, A, t);
+              (A.token = e), n(92).call({}, A, t);
             }),
             (A.stars.remove = function(A, t) {
-              (A.token = e), n(94).call({}, A, t);
+              (A.token = e), n(93).call({}, A, t);
             }),
             (A.team.accessLogs = function(A, t) {
-              (A.token = e), n(95).call({}, A, t);
+              (A.token = e), n(94).call({}, A, t);
             }),
             (A.team.billableInfo = function(A, t) {
-              (A.token = e), n(96).call({}, A, t);
+              (A.token = e), n(95).call({}, A, t);
             }),
             (A.team.info = function(A, t) {
-              (A.token = e), n(97).call({}, A, t);
+              (A.token = e), n(96).call({}, A, t);
             }),
             (A.team.integrationLogs = function(A, t) {
-              (A.token = e), n(98).call({}, A, t);
+              (A.token = e), n(97).call({}, A, t);
             }),
             (A.team.profile.get = function(A, t) {
-              (A.token = e), n(99).call({}, A, t);
+              (A.token = e), n(98).call({}, A, t);
             }),
             (A.usergroups.create = function(A, t) {
-              (A.token = e), n(100).call({}, A, t);
+              (A.token = e), n(99).call({}, A, t);
             }),
             (A.usergroups.disable = function(A, t) {
-              (A.token = e), n(101).call({}, A, t);
+              (A.token = e), n(100).call({}, A, t);
             }),
             (A.usergroups.enable = function(A, t) {
-              (A.token = e), n(102).call({}, A, t);
+              (A.token = e), n(101).call({}, A, t);
             }),
             (A.usergroups.list = function(A, t) {
-              (A.token = e), n(103).call({}, A, t);
+              (A.token = e), n(102).call({}, A, t);
             }),
             (A.usergroups.update = function(A, t) {
-              (A.token = e), n(104).call({}, A, t);
+              (A.token = e), n(103).call({}, A, t);
             }),
             (A.usergroups.users.list = function(A, t) {
-              (A.token = e), n(105).call({}, A, t);
+              (A.token = e), n(104).call({}, A, t);
             }),
             (A.usergroups.users.update = function(A, t) {
-              (A.token = e), n(106).call({}, A, t);
+              (A.token = e), n(105).call({}, A, t);
             }),
             (A.users.getPresence = function(A, t) {
-              (A.token = e), n(107).call({}, A, t);
+              (A.token = e), n(106).call({}, A, t);
             }),
             (A.users.identity = function(A, t) {
-              (A.token = e), n(108).call({}, A, t);
+              (A.token = e), n(107).call({}, A, t);
             }),
             (A.users.info = function(A, t) {
-              (A.token = e), n(109).call({}, A, t);
+              (A.token = e), n(108).call({}, A, t);
             }),
             (A.users.list = function(A, t) {
-              (A.token = e), n(110).call({}, A, t);
+              (A.token = e), n(109).call({}, A, t);
             }),
             (A.users.profile.get = function(A, t) {
               (A.token = e), n(126).call({}, A, t);
@@ -6034,10 +6034,10 @@ object-assign
               (A.token = e), n(127).call({}, A, t);
             }),
             (A.users.setActive = function(A, t) {
-              (A.token = e), n(111).call({}, A, t);
+              (A.token = e), n(110).call({}, A, t);
             }),
             (A.users.setPresence = function(A, t) {
-              (A.token = e), n(112).call({}, A, t);
+              (A.token = e), n(111).call({}, A, t);
             }),
             A
           );
@@ -6078,27 +6078,27 @@ object-assign
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
       var t,
-        r = n(17),
+        r = n(16),
         a = (t = r) && t.__esModule ? t : { default: t };
       (A.default = { info: a.default }), (e.exports = A.default);
     },
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = I(n(18)),
-        r = I(n(19)),
-        a = I(n(20)),
-        o = I(n(21)),
-        i = I(n(22)),
-        s = I(n(23)),
-        c = I(n(24)),
-        _ = I(n(25)),
-        l = I(n(26)),
-        u = I(n(27)),
-        g = I(n(28)),
-        d = I(n(29)),
-        C = I(n(30)),
-        p = I(n(31));
+      var t = I(n(17)),
+        r = I(n(18)),
+        a = I(n(19)),
+        o = I(n(20)),
+        i = I(n(21)),
+        s = I(n(22)),
+        c = I(n(23)),
+        _ = I(n(24)),
+        l = I(n(25)),
+        u = I(n(26)),
+        g = I(n(27)),
+        d = I(n(28)),
+        C = I(n(29)),
+        p = I(n(30));
       function I(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6123,10 +6123,10 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = i(n(32)),
-        r = i(n(34)),
-        a = i(n(35)),
-        o = i(n(33));
+      var t = i(n(31)),
+        r = i(n(33)),
+        a = i(n(34)),
+        o = i(n(32));
       function i(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6141,11 +6141,11 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = s(n(38)),
-        r = s(n(36)),
-        a = s(n(37)),
-        o = s(n(39)),
-        i = s(n(40));
+      var t = s(n(37)),
+        r = s(n(35)),
+        a = s(n(36)),
+        o = s(n(38)),
+        i = s(n(39));
       function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6161,15 +6161,15 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = u(n(45)),
-        r = u(n(46)),
-        a = u(n(47)),
-        o = u(n(50)),
-        i = u(n(42)),
-        s = u(n(43)),
-        c = u(n(44)),
-        _ = u(n(48)),
-        l = u(n(49));
+      var t = u(n(44)),
+        r = u(n(45)),
+        a = u(n(46)),
+        o = u(n(49)),
+        i = u(n(41)),
+        s = u(n(42)),
+        c = u(n(43)),
+        _ = u(n(47)),
+        l = u(n(48));
       function u(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6187,22 +6187,22 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = B(n(51)),
-        r = B(n(52)),
-        a = B(n(53)),
-        o = B(n(54)),
-        i = B(n(55)),
-        s = B(n(56)),
-        c = B(n(57)),
-        _ = B(n(58)),
-        l = B(n(59)),
-        u = B(n(60)),
-        g = B(n(61)),
-        d = B(n(62)),
-        C = B(n(63)),
-        p = B(n(64)),
-        I = B(n(65)),
-        f = B(n(66));
+      var t = B(n(50)),
+        r = B(n(51)),
+        a = B(n(52)),
+        o = B(n(53)),
+        i = B(n(54)),
+        s = B(n(55)),
+        c = B(n(56)),
+        _ = B(n(57)),
+        l = B(n(58)),
+        u = B(n(59)),
+        g = B(n(60)),
+        d = B(n(61)),
+        C = B(n(62)),
+        p = B(n(63)),
+        I = B(n(64)),
+        f = B(n(65));
       function B(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6229,11 +6229,11 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = s(n(67)),
-        r = s(n(68)),
-        a = s(n(69)),
-        o = s(n(70)),
-        i = s(n(71));
+      var t = s(n(66)),
+        r = s(n(67)),
+        a = s(n(68)),
+        o = s(n(69)),
+        i = s(n(70));
       function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6249,11 +6249,11 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = s(n(72)),
-        r = s(n(73)),
-        a = s(n(74)),
-        o = s(n(75)),
-        i = s(n(76));
+      var t = s(n(71)),
+        r = s(n(72)),
+        a = s(n(73)),
+        o = s(n(74)),
+        i = s(n(75));
       function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6284,10 +6284,10 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = i(n(80)),
-        r = i(n(81)),
-        a = i(n(82)),
-        o = i(n(83));
+      var t = i(n(79)),
+        r = i(n(80)),
+        a = i(n(81)),
+        o = i(n(82));
       function i(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6302,11 +6302,11 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = s(n(84)),
-        r = s(n(85)),
-        a = s(n(86)),
-        o = s(n(87)),
-        i = s(n(88));
+      var t = s(n(83)),
+        r = s(n(84)),
+        a = s(n(85)),
+        o = s(n(86)),
+        i = s(n(87));
       function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6322,9 +6322,9 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = o(n(77)),
-        r = o(n(78)),
-        a = o(n(79));
+      var t = o(n(76)),
+        r = o(n(77)),
+        a = o(n(78));
       function o(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6372,7 +6372,7 @@ object-assign
             e
           );
         });
-      var t = a(n(10)),
+      var t = a(n(9)),
         r = a(n(141));
       function a(e) {
         return e && e.__esModule ? e : { default: e };
@@ -6462,9 +6462,9 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = o(n(89)),
-        r = o(n(90)),
-        a = o(n(91));
+      var t = o(n(88)),
+        r = o(n(89)),
+        a = o(n(90));
       function o(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6474,9 +6474,9 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = o(n(92)),
-        r = o(n(93)),
-        a = o(n(94));
+      var t = o(n(91)),
+        r = o(n(92)),
+        a = o(n(93));
       function o(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6486,11 +6486,11 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = s(n(95)),
-        r = s(n(96)),
-        a = s(n(97)),
-        o = s(n(98)),
-        i = s(n(99));
+      var t = s(n(94)),
+        r = s(n(95)),
+        a = s(n(96)),
+        o = s(n(97)),
+        i = s(n(98));
       function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6506,13 +6506,13 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = _(n(100)),
-        r = _(n(101)),
-        a = _(n(102)),
-        o = _(n(103)),
-        i = _(n(104)),
-        s = _(n(105)),
-        c = _(n(106));
+      var t = _(n(99)),
+        r = _(n(100)),
+        a = _(n(101)),
+        o = _(n(102)),
+        i = _(n(103)),
+        s = _(n(104)),
+        c = _(n(105));
       function _(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6529,12 +6529,12 @@ object-assign
     function(e, A, n) {
       'use strict';
       Object.defineProperty(A, '__esModule', { value: !0 });
-      var t = c(n(107)),
-        r = c(n(108)),
-        a = c(n(109)),
-        o = c(n(110)),
-        i = c(n(111)),
-        s = c(n(112));
+      var t = c(n(106)),
+        r = c(n(107)),
+        a = c(n(108)),
+        o = c(n(109)),
+        i = c(n(110)),
+        s = c(n(111));
       function c(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6931,7 +6931,7 @@ object-assign
         n.d(A, 'systemHooks', function() {
           return o;
         });
-      var t = n(113),
+      var t = n(112),
         r = n.n(t),
         a = n(4),
         o = [
@@ -6994,25 +6994,23 @@ object-assign
       var t = {};
       n.r(t),
         n.d(t, 'isHookMessage', function() {
-          return h;
+          return f;
         }),
         n.d(t, 'execHooksIfFound', function() {
-          return E;
+          return B;
         });
       var r = {};
       n.r(r),
         n.d(r, 'changeColorRecursive', function() {
-          return w;
+          return E;
         });
       var a = n(3),
         o = n.n(a),
-        i = n(6),
+        i = (n(113), n(5)),
         s = n.n(i),
-        c = n(5),
-        _ = n.n(c),
-        l = n(8),
-        u = n(11);
-      var g = function e(A) {
+        c = n(7),
+        _ = n(10);
+      var l = function e(A) {
           !(function(e, A) {
             if (!(e instanceof A))
               throw new TypeError('Cannot call a class as a function');
@@ -7023,49 +7021,49 @@ object-assign
             (this.real_name = A.real_name || A.name),
             (this.image = A.profile.image_48);
         },
-        d = n(2),
+        u = n(2),
+        g = n.n(u),
+        d = n(11),
         C = n.n(d),
-        p = n(12),
-        I = n.n(p),
-        f = n(4),
-        B = n(7),
-        h = function(e) {
+        p = n(4),
+        I = n(6),
+        f = function(e) {
           return /\$=>(@.*.):(.*)/.exec(e);
         },
-        E = function(e) {
+        B = function(e) {
           var A = e.message,
             t = e.customHooks,
             r = e.apiToken,
             a = e.channel,
             o = e.username,
-            i = Object(f.a)(A.text),
-            s = h(i);
+            i = Object(p.a)(A.text),
+            s = f(i);
           s &&
-            Object(f.i)(A, o) &&
-            Object(f.e)(A) &&
+            Object(p.i)(A, o) &&
+            Object(p.e)(A) &&
             (s[2] &&
               (n(151).systemHooks.map(function(e) {
                 e.id === s[2] &&
-                  m({ hook: e, apiToken: r, channel: a, username: o });
+                  h({ hook: e, apiToken: r, channel: a, username: o });
               }),
               t.map(function(e) {
                 e.id === s[2] &&
-                  m({ hook: e, apiToken: r, channel: a, username: o });
+                  h({ hook: e, apiToken: r, channel: a, username: o });
               })));
         },
-        m = function(e) {
+        h = function(e) {
           var A = e.hook,
             n = e.apiToken,
             t = e.channel,
             r = e.username;
           return (
-            Object(B.debugLog)('Hook trigger found', A.id),
+            Object(I.debugLog)('Hook trigger found', A.id),
             A.action({ apiToken: n, channel: t, username: r }).then(function(
               e
             ) {
               return (
-                Object(B.debugLog)('Action executed. Posting response.'),
-                Object(f.h)({
+                Object(I.debugLog)('Action executed. Posting response.'),
+                Object(p.h)({
                   text: '$=>@['.concat(A.id, ']:').concat(e),
                   apiToken: n,
                   channel: t,
@@ -7075,16 +7073,16 @@ object-assign
             })
           );
         },
-        w = function e(A, n, t) {
+        E = function e(A, n, t) {
           if (A.style) {
             var r = window.getComputedStyle(A).backgroundColor;
-            r && x(r) === n && (A.style.backgroundColor = t);
+            r && m(r) === n && (A.style.backgroundColor = t);
           }
           if (A.childNodes)
             for (var a = 0; a < A.childNodes.length; a++)
               e(A.childNodes[a], n, t);
         },
-        x = function(e) {
+        m = function(e) {
           return (e = e.match(
             /^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i
           )) && 4 === e.length
@@ -7094,8 +7092,8 @@ object-assign
                 ('0' + parseInt(e[3], 10).toString(16)).slice(-2)
             : '';
         };
-      function b(e) {
-        return (b =
+      function w(e) {
+        return (w =
           'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function(e) {
                 return typeof e;
@@ -7109,7 +7107,7 @@ object-assign
                   : typeof e;
               })(e);
       }
-      function U(e, A) {
+      function x(e, A) {
         return (
           (function(e) {
             if (Array.isArray(e)) return e;
@@ -7144,7 +7142,7 @@ object-assign
           })()
         );
       }
-      function v() {
+      function b() {
         var e = (function(e, A) {
           A || (A = e.slice(0));
           return Object.freeze(
@@ -7152,13 +7150,13 @@ object-assign
           );
         })(['Could not connect to Slack Server. Reason: ', '']);
         return (
-          (v = function() {
+          (b = function() {
             return e;
           }),
           e
         );
       }
-      function Q(e, A) {
+      function U(e, A) {
         for (var n = 0; n < A.length; n++) {
           var t = A[n];
           (t.enumerable = t.enumerable || !1),
@@ -7167,33 +7165,33 @@ object-assign
             Object.defineProperty(e, t.key, t);
         }
       }
-      function O(e) {
-        return (O = Object.setPrototypeOf
+      function v(e) {
+        return (v = Object.setPrototypeOf
           ? Object.getPrototypeOf
           : function(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
             })(e);
       }
-      function T(e) {
+      function Q(e) {
         if (void 0 === e)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called"
           );
         return e;
       }
-      function F(e, A) {
-        return (F =
+      function O(e, A) {
+        return (O =
           Object.setPrototypeOf ||
           function(e, A) {
             return (e.__proto__ = A), e;
           })(e, A);
       }
-      var R = B.debugLog,
-        P = B.arraysIdentical,
-        y = t.isHookMessage,
-        k = t.execHooksIfFound,
-        D = r.changeColorRecursive,
-        M = (function(e) {
+      var T = I.debugLog,
+        F = I.arraysIdentical,
+        R = t.isHookMessage,
+        P = t.execHooksIfFound,
+        y = r.changeColorRecursive,
+        k = (function(e) {
           function A(e) {
             var n, t, r;
             return (
@@ -7202,11 +7200,11 @@ object-assign
                   throw new TypeError('Cannot call a class as a function');
               })(this, A),
               (t = this),
-              (r = O(A).call(this, e)),
+              (r = v(A).call(this, e)),
               ((n =
-                !r || ('object' !== b(r) && 'function' != typeof r)
-                  ? T(t)
-                  : r).bot = l.rtm.client()),
+                !r || ('object' !== w(r) && 'function' != typeof r)
+                  ? Q(t)
+                  : r).bot = c.rtm.client()),
               (n.state = {
                 failed: !1,
                 helpText: '',
@@ -7237,30 +7235,30 @@ object-assign
               (n.messageFormatter = { emoji: !1 }),
               (n.fileUploadTitle = 'Posted by '.concat(n.state.botName)),
               (n.themeDefaultColor = '#2e7eea'),
-              (n.loadMessages = n.loadMessages.bind(T(n))),
-              (n.postMyMessage = n.postMyMessage.bind(T(n))),
-              (n.gotNewMessages = n.gotNewMessages.bind(T(n))),
-              (n.getUserImg = n.getUserImg.bind(T(n))),
-              (n.handleChange = n.handleChange.bind(T(n))),
-              (n.handleFileChange = n.handleFileChange.bind(T(n))),
-              (n.openChatBox = n.openChatBox.bind(T(n))),
-              (n.closeChatBox = n.closeChatBox.bind(T(n))),
-              (n.goToChatView = n.goToChatView.bind(T(n))),
-              (n.goToChannelView = n.goToChannelView.bind(T(n))),
+              (n.loadMessages = n.loadMessages.bind(Q(n))),
+              (n.postMyMessage = n.postMyMessage.bind(Q(n))),
+              (n.gotNewMessages = n.gotNewMessages.bind(Q(n))),
+              (n.getUserImg = n.getUserImg.bind(Q(n))),
+              (n.handleChange = n.handleChange.bind(Q(n))),
+              (n.handleFileChange = n.handleFileChange.bind(Q(n))),
+              (n.openChatBox = n.openChatBox.bind(Q(n))),
+              (n.closeChatBox = n.closeChatBox.bind(Q(n))),
+              (n.goToChatView = n.goToChatView.bind(Q(n))),
+              (n.goToChannelView = n.goToChannelView.bind(Q(n))),
               (n.displayFormattedMessage = n.displayFormattedMessage.bind(
-                T(n)
+                Q(n)
               )),
-              Object(u.load)()
+              Object(_.load)()
                 .then(function() {
                   n.messageFormatter = { emoji: !0 };
                 })
                 .catch(function(e) {
-                  return R('Cant initiate emoji library '.concat(e));
+                  return T('Cant initiate emoji library '.concat(e));
                 }),
               n
-                .connectBot(T(n))
+                .connectBot(Q(n))
                 .then(function(e) {
-                  R('CONNECTED!', 'got data', e),
+                  T('CONNECTED!', 'got data', e),
                     n.props.defaultChannel &&
                       (n.activeChannel = e.channels.filter(function(e) {
                         return e.name === n.props.defaultChannel;
@@ -7271,7 +7269,7 @@ object-assign
                     });
                 })
                 .catch(function(e) {
-                  R('could not intialize slack bot', e),
+                  T('could not intialize slack bot', e),
                     n.setState({ failed: !0 });
                 }),
               n
@@ -7287,7 +7285,7 @@ object-assign
               (e.prototype = Object.create(A && A.prototype, {
                 constructor: { value: e, writable: !0, configurable: !0 }
               })),
-                A && F(e, A);
+                A && O(e, A);
             })(A, a['Component']),
             (n = A),
             (t = [
@@ -7301,35 +7299,35 @@ object-assign
               {
                 key: 'displayFormattedMessage',
                 value: function(e) {
-                  var A = Object(f.a)(e.text),
+                  var A = Object(p.a)(e.text),
                     n = e.username === this.state.botName;
-                  if (Object(f.f)(e)) {
-                    var t = Object(f.c)(e.text);
+                  if (Object(p.f)(e)) {
+                    var t = Object(p.c)(e.text);
                     if (t && t[0] && t[1]) {
                       var r = e.text.indexOf(this.fileUploadTitle) > -1,
                         a = t[1].split('/');
                       return o.a.createElement(
                         'div',
                         {
-                          className: _()(
-                            C.a.chat__msgRow,
-                            r ? C.a.mine : C.a.notMine
+                          className: s()(
+                            g.a.chat__msgRow,
+                            r ? g.a.mine : g.a.notMine
                           ),
                           key: e.ts
                         },
                         r
                           ? o.a.createElement('img', {
                               src: this.state.userImage,
-                              className: C.a.user__contact__photo,
+                              className: g.a.user__contact__photo,
                               alt: 'userIcon'
                             })
                           : null,
                         o.a.createElement(
                           'div',
                           {
-                            className: _()(
-                              C.a.chat__message,
-                              r ? C.a.mine : C.a.notMine
+                            className: s()(
+                              g.a.chat__message,
+                              r ? g.a.mine : g.a.notMine
                             )
                           },
                           o.a.createElement(
@@ -7350,50 +7348,50 @@ object-assign
                     }
                     return o.a.createElement(
                       'div',
-                      { className: _()(C.a.chat__msgRow), key: e.ts },
+                      { className: s()(g.a.chat__msgRow), key: e.ts },
                       o.a.createElement('div', {
-                        className: _()(C.a.chat__message, C.a.system__message),
+                        className: s()(g.a.chat__message, g.a.system__message),
                         dangerouslySetInnerHTML: { __html: A }
                       })
                     );
                   }
-                  if (y(A)) return null;
-                  var i = Object(f.i)(e, this.state.botName),
-                    s = Object(f.d)(A);
+                  if (R(A)) return null;
+                  var i = Object(p.i)(e, this.state.botName),
+                    c = Object(p.d)(A);
                   return (
                     this.messageFormatter.emoji &&
-                      s &&
-                      (A = Object(u.parse)(A)),
+                      c &&
+                      (A = Object(_.parse)(A)),
                     o.a.createElement(
                       'div',
                       {
-                        className: _()(
-                          C.a.chat__msgRow,
-                          n ? C.a.mine : C.a.notMine
+                        className: s()(
+                          g.a.chat__msgRow,
+                          n ? g.a.mine : g.a.notMine
                         ),
                         key: e.ts
                       },
                       n
                         ? o.a.createElement('img', {
                             src: this.state.userImage,
-                            className: C.a.user__contact__photo,
+                            className: g.a.user__contact__photo,
                             alt: 'userIcon'
                           })
                         : null,
-                      s
+                      c
                         ? o.a.createElement('div', {
-                            className: _()(
-                              C.a.chat__message,
-                              i ? C.a.mentioned : ''
+                            className: s()(
+                              g.a.chat__message,
+                              i ? g.a.mentioned : ''
                             ),
                             dangerouslySetInnerHTML: { __html: A }
                           })
                         : o.a.createElement(
                             'div',
                             {
-                              className: _()(
-                                C.a.chat__message,
-                                i ? C.a.mentioned : ''
+                              className: s()(
+                                g.a.chat__message,
+                                i ? g.a.mentioned : ''
                               )
                             },
                             A
@@ -7416,11 +7414,11 @@ object-assign
                   return new Promise(function(A, n) {
                     try {
                       e.bot.started(function(n) {
-                        R(n);
+                        T(n);
                         var t = [];
                         n.users.map(function(A) {
                           return e.isValidOnlineUser(A)
-                            ? t.push(new g(A))
+                            ? t.push(new l(A))
                             : null;
                         });
                         var r = [];
@@ -7439,7 +7437,7 @@ object-assign
                       }),
                         e.bot.listen({ token: e.apiToken }, function(A) {
                           A &&
-                            (R(v(), JSON.stringify(A)),
+                            (T(b(), JSON.stringify(A)),
                             e.setState({
                               helpText: 'Slack Connection Error!'
                             }));
@@ -7454,7 +7452,7 @@ object-assign
                 key: 'postMyMessage',
                 value: function() {
                   var e = this;
-                  return Object(f.h)({
+                  return Object(p.h)({
                     text: this.state.postMyMessage,
                     lastThreadTs: this.state.userThreadTss[
                       this.state.userThreadTss.length - 1
@@ -7480,7 +7478,7 @@ object-assign
                       );
                     })
                     .catch(function(e) {
-                      return e ? R('failed to post. Err:', e) : null;
+                      return e ? T('failed to post. Err:', e) : null;
                     });
                 }
               },
@@ -7493,12 +7491,12 @@ object-assign
                     (this.chatInitiatedTs = Date.now() / 1e3);
                   var t = function() {
                     var t = n.state.messages.length;
-                    l.channels.history(
+                    c.channels.history(
                       { token: A.apiToken, channel: e.id },
                       function(r, a) {
                         if (r)
                           return (
-                            R(
+                            T(
                               'There was an error loading messages for '
                                 .concat(e.name, '. ')
                                 .concat(r)
@@ -7506,11 +7504,11 @@ object-assign
                             A.setState({ failed: !0 })
                           );
                         if (
-                          (R('got data', a),
-                          !P(A.state.messages, a.messages.reverse()))
+                          (T('got data', a),
+                          !F(A.state.messages, a.messages.reverse()))
                         ) {
                           if (0 !== A.state.messages.length) {
-                            var o = Object(f.b)(
+                            var o = Object(p.b)(
                               A.state.messages,
                               a.messages,
                               A.state.botName
@@ -7518,7 +7516,7 @@ object-assign
                             A.gotNewMessages(o),
                               o &&
                                 o.map(function(e) {
-                                  return k({
+                                  return P({
                                     message: e,
                                     username: A.state.botName,
                                     customHooks: A.state.hooks,
@@ -7586,24 +7584,24 @@ object-assign
                     A
                       ? o.a.createElement('img', {
                           src: A,
-                          className: C.a.chat__contact__photo,
+                          className: g.a.chat__contact__photo,
                           alt: 'mentionedUserImg'
                         })
-                      : Object(f.e)(e)
+                      : Object(p.e)(e)
                       ? o.a.createElement('img', {
                           src: 'https://robohash.org/'.concat(n, '?set=set2'),
-                          className: C.a.chat__contact__photo,
+                          className: g.a.chat__contact__photo,
                           alt: n
                         })
-                      : Object(f.f)(e)
+                      : Object(p.f)(e)
                       ? o.a.createElement('img', {
                           src: 'https://robohash.org/'.concat(n, '?set=set3'),
-                          className: C.a.chat__contact__photo,
+                          className: g.a.chat__contact__photo,
                           alt: n
                         })
                       : o.a.createElement('img', {
                           src: 'https://robohash.org/'.concat(n),
-                          className: C.a.chat__contact__photo,
+                          className: g.a.chat__contact__photo,
                           alt: n
                         })
                   );
@@ -7619,12 +7617,12 @@ object-assign
                 key: 'handleFileChange',
                 value: function(e) {
                   var A = this;
-                  R('Going to upload', e.target.value, e.target);
+                  T('Going to upload', e.target.value, e.target);
                   var n = document.getElementById('chat__upload').files[0];
                   return this.setState(
                     { postMyFile: e.target.value, fileUploadLoader: !0 },
                     function() {
-                      return Object(f.g)({
+                      return Object(p.g)({
                         file: n,
                         title: A.fileUploadTitle,
                         apiToken: A.apiToken,
@@ -7637,7 +7635,7 @@ object-assign
                           });
                         })
                         .catch(function(e) {
-                          R('Could not post file', e);
+                          T('Could not post file', e);
                         });
                     }
                   );
@@ -7742,7 +7740,7 @@ object-assign
                 value: function() {
                   var e = this;
                   this.state.themeColor &&
-                    D(
+                    y(
                       document.body,
                       this.themeDefaultColor,
                       this.state.themeColor
@@ -7763,7 +7761,7 @@ object-assign
                     Object.entries(this.props.chatStyles).map(function(A) {
                       var n,
                         t,
-                        r = U(A, 2),
+                        r = x(A, 2),
                         a = r[0],
                         i = r[1];
                       return o.a.createElement(
@@ -7786,42 +7784,42 @@ object-assign
                               'div',
                               {
                                 style: n,
-                                className: _()(
-                                  C.a.card,
-                                  C.a.transition,
-                                  e.state.chatbox.active ? C.a.active : '',
+                                className: s()(
+                                  g.a.card,
+                                  g.a.transition,
+                                  e.state.chatbox.active ? g.a.active : '',
                                   e.state.chatbox.chatActiveView
-                                    ? C.a.chatActive
+                                    ? g.a.chatActive
                                     : ''
                                 ),
                                 onClick: e.openChatBox
                               },
                               o.a.createElement(
                                 'div',
-                                { className: C.a.helpHeader },
+                                { className: g.a.helpHeader },
                                 e.state.newMessageNotification > 0 &&
                                   o.a.createElement(
                                     'span',
-                                    { className: C.a.unreadNotificationsBadge },
+                                    { className: g.a.unreadNotificationsBadge },
                                     e.state.newMessageNotification
                                   ),
                                 o.a.createElement(
                                   'h2',
-                                  { className: C.a.transition },
+                                  { className: g.a.transition },
                                   e.state.helpText || 'Help?'
                                 )
                               ),
                               o.a.createElement('div', {
-                                className: _()(C.a.card_circle, C.a.transition)
+                                className: s()(g.a.card_circle, g.a.transition)
                               }),
                               o.a.createElement(
                                 'div',
                                 {
-                                  className: _()(
-                                    C.a.channels,
-                                    C.a.transition,
+                                  className: s()(
+                                    g.a.channels,
+                                    g.a.transition,
                                     e.state.chatbox.channelActiveView
-                                      ? C.a.channelActive
+                                      ? g.a.channelActive
                                       : ''
                                   )
                                 },
@@ -7829,7 +7827,7 @@ object-assign
                                   return o.a.createElement(
                                     'div',
                                     {
-                                      className: C.a.contact,
+                                      className: g.a.contact,
                                       key: A.id,
                                       onClick: function(n) {
                                         return e.goToChatView(n, A);
@@ -7838,23 +7836,23 @@ object-assign
                                     A.icon
                                       ? o.a.createElement('img', {
                                           src: A.icon,
-                                          className: C.a.contact__photo
+                                          className: g.a.contact__photo
                                         })
                                       : o.a.createElement('div', {
                                           dangerouslySetInnerHTML: {
-                                            __html: I.a
+                                            __html: C.a
                                           },
-                                          className: C.a.contact__photo
+                                          className: g.a.contact__photo
                                         }),
                                     o.a.createElement(
                                       'span',
-                                      { className: C.a.contact__name },
+                                      { className: g.a.contact__name },
                                       A.name
                                     ),
                                     o.a.createElement('span', {
-                                      className: _()(
-                                        C.a.contact__status,
-                                        C.a.online
+                                      className: s()(
+                                        g.a.contact__status,
+                                        g.a.online
                                       )
                                     })
                                   );
@@ -7862,50 +7860,50 @@ object-assign
                               ),
                               o.a.createElement(
                                 'div',
-                                { className: _()(C.a.chat) },
+                                { className: s()(g.a.chat) },
                                 o.a.createElement(
                                   'div',
-                                  { className: _()(C.a.chatHeader) },
+                                  { className: s()(g.a.chatHeader) },
                                   o.a.createElement('span', {
-                                    className: C.a.chat__back,
+                                    className: g.a.chat__back,
                                     onClick: e.goToChannelView
                                   }),
                                   o.a.createElement(
                                     'div',
-                                    { className: C.a.chat__person },
+                                    { className: g.a.chat__person },
                                     o.a.createElement(
                                       'span',
-                                      { className: C.a.chat__status },
+                                      { className: g.a.chat__status },
                                       'status'
                                     ),
                                     o.a.createElement('span', {
-                                      className: _()(
-                                        C.a.chat__online,
-                                        C.a.active
+                                      className: s()(
+                                        g.a.chat__online,
+                                        g.a.active
                                       )
                                     }),
                                     o.a.createElement(
                                       'span',
-                                      { className: C.a.chat__name },
+                                      { className: g.a.chat__name },
                                       e.activeChannel.name
                                     )
                                   ),
                                   e.activeChannel.icon
                                     ? o.a.createElement('img', {
                                         src: e.activeChannel.icon,
-                                        className: C.a.channel__header__photo
+                                        className: g.a.channel__header__photo
                                       })
                                     : o.a.createElement('div', {
                                         dangerouslySetInnerHTML: {
-                                          __html: I.a
+                                          __html: C.a
                                         },
-                                        className: C.a.channel__header__photo
+                                        className: g.a.channel__header__photo
                                       }),
                                   e.props.closeChatButton
                                     ? o.a.createElement(
                                         'button',
                                         {
-                                          className: C.a.channel__close__button,
+                                          className: g.a.channel__close__button,
                                           onClick: e.closeChatBox
                                         },
                                         '×'
@@ -7915,7 +7913,7 @@ object-assign
                                 o.a.createElement(
                                   'div',
                                   {
-                                    className: C.a.chat__messages,
+                                    className: g.a.chat__messages,
                                     id: 'widget-reactSlakChatMessages'
                                   },
                                   e.state.messages.map(function(A) {
@@ -7929,11 +7927,11 @@ object-assign
                                     ? o.a.createElement(
                                         'div',
                                         {
-                                          className: C.a.chat__file__uploading
+                                          className: g.a.chat__file__uploading
                                         },
                                         o.a.createElement(
                                           'span',
-                                          { className: C.a.loading },
+                                          { className: g.a.loading },
                                           'Uploading'
                                         )
                                       )
@@ -7945,17 +7943,17 @@ object-assign
                                         null,
                                         o.a.createElement(
                                           'div',
-                                          { className: C.a.attachment },
+                                          { className: g.a.attachment },
                                           o.a.createElement(
                                             'label',
                                             {
                                               htmlFor: 'chat__upload',
-                                              className: C.a.attachmentIcon
+                                              className: g.a.attachmentIcon
                                             },
                                             o.a.createElement('input', {
                                               type: 'file',
                                               id: 'chat__upload',
-                                              className: C.a.chat__upload,
+                                              className: g.a.chat__upload,
                                               value: e.state.postMyFile,
                                               onChange: function(A) {
                                                 return e.handleFileChange(A);
@@ -7966,7 +7964,7 @@ object-assign
                                         o.a.createElement('input', {
                                           type: 'text',
                                           id: 'chat__input__text',
-                                          className: C.a.chat__input,
+                                          className: g.a.chat__input,
                                           value: e.state.postMyMessage,
                                           placeholder: 'Enter your message...',
                                           onKeyPress: function(A) {
@@ -7988,28 +7986,13 @@ object-assign
                   );
                 }
               }
-            ]) && Q(n.prototype, t),
-            r && Q(n, r),
+            ]) && U(n.prototype, t),
+            r && U(n, r),
             A
           );
         })();
-      M.propTypes = {
-        apiToken: s.a.string.isRequired,
-        channels: s.a.array.isRequired,
-        botName: s.a.string,
-        helpText: s.a.string,
-        defaultChannel: s.a.string,
-        defaultMessage: s.a.string,
-        singleUserMode: s.a.bool,
-        closeChatButton: s.a.bool,
-        themeColor: s.a.string,
-        userImage: s.a.string,
-        hooks: s.a.array,
-        debugMode: s.a.bool
-      };
-      var L = M;
       n.d(A, 'ReactSlackChat', function() {
-        return L;
+        return k;
       });
     }
   ]);

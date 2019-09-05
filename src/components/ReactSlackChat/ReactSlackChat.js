@@ -825,26 +825,26 @@ class ReactSlackChat extends Component {
   }
 }
 
-// PropTypes validation
-ReactSlackChat.propTypes = {
-  apiToken: PropTypes.string.isRequired,
-  channels: PropTypes.array.isRequired,
-  botName: PropTypes.string,
-  helpText: PropTypes.string,
-  // bypass the channel list and go directly to a specific channel
-  defaultChannel: PropTypes.string,
-  // prepend a default message to the beginning of the message list, such as an
-  // automatic greeting when a user first joins the channel
-  defaultMessage: PropTypes.string,
-  // filter messages so the user only sees his/her messages and replies
-  // directed at the user in threads on the Slack side
-  singleUserMode: PropTypes.bool,
-  // add an "x" close button in the corner of the chat window
-  closeChatButton: PropTypes.bool,
-  themeColor: PropTypes.string,
-  userImage: PropTypes.string,
-  hooks: PropTypes.array,
-  debugMode: PropTypes.bool
-};
+// // PropTypes validation
+// ReactSlackChat.propTypes = {
+//   apiToken: PropTypes.string.isRequired,
+//   channels: PropTypes.array.isRequired,
+//   botName: PropTypes.string,
+//   helpText: PropTypes.string,
+//   // bypass the channel list and go directly to a specific channel
+//   defaultChannel: PropTypes.string,
+//   // prepend a default message to the beginning of the message list, such as an
+//   // automatic greeting when a user first joins the channel
+//   defaultMessage: PropTypes.string,
+//   // filter messages so the user only sees his/her messages and replies
+//   // directed at the user in threads on the Slack side
+//   singleUserMode: PropTypes.bool,
+//   // add an "x" close button in the corner of the chat window
+//   closeChatButton: PropTypes.bool,
+//   themeColor: PropTypes.string,
+//   userImage: PropTypes.string,
+//   hooks: PropTypes.array,
+//   debugMode: PropTypes.bool
+// };
 
 export default ReactSlackChat;
